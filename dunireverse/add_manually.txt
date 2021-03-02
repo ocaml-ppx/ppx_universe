@@ -1,0 +1,3 @@
+couldn't add OCanren-ppx: https://github.com/JetBrains-Research/OCanren.git#dune
+couldn't add ppx_deriving_encoding: git://gitlab.com/o-labs/ppx_deriving_encoding
+couldn't add ppx_deriving_jsoo: git://gitlab.com/o-labs/ppx_deriving_jsoo

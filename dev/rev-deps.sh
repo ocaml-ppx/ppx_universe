@@ -54,12 +54,12 @@ pull () {
     tmp=${tmp%\"}
     tmp=${tmp#\"}
     DEV_REPO=${tmp#git+}
-    git clone $DEV_REPO $basename
+    git submodule add $DEV_REPO $basename || echo "couldn't add $basename: $DEV_REPO" >> add_manually.txt
     case $1 in
       janestreet|js)
         # To checkout to the latest released version
         cd $basename
-        git checkout $ver || git checkout v$ver || true
+        git checkout $ver || git checkout v$ver || echo "couldn't checkout $basename to $ver or v$ver" >> checkout_manually.txt
         cd ..
         ;;
       *)
@@ -76,20 +76,19 @@ install_deps () {
   do
     PACKAGES="$PACKAGES $line"
   done < dunireverse/.deps
-  opam monorepo lock --build-only $PACKAGES
+  opam monorepo lock --build-only $PACKAGES --ocaml-version 4.10.0
   opam monorepo pull
 }
 
 build () {
-  PACKAGES="ppxlib"
-  cd dunireverse
-  for dir in */
+  PACKAGES="ppxlib.install"
+  while read line
   do
-    basename=${dir%/}
-    PACKAGES="$PACKAGES,$basename"
-  done
-  cd ..
-  dune build -p $PACKAGES
+    basename=${line%%.*}
+    dir=$(find dunireverse/ -name "$basename.opam" -exec dirname {} \;)
+    PACKAGES="$PACKAGES $dir/$basename.install"
+  done < dunireverse/.deps
+  dune build --profile release $PACKAGES
 }
 
 if [ $# -ne 2 ]

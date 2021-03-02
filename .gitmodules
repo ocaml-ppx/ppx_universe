@@ -1,0 +1,243 @@
+[submodule "dunireverse/base_quickcheck"]
+	path = dunireverse/base_quickcheck
+	url = https://github.com/janestreet/base_quickcheck.git
+[submodule "dunireverse/hardcaml"]
+	path = dunireverse/hardcaml
+	url = https://github.com/janestreet/hardcaml.git
+[submodule "dunireverse/mlt_parser"]
+	path = dunireverse/mlt_parser
+	url = https://github.com/janestreet/mlt_parser.git
+[submodule "dunireverse/ppx_accessor"]
+	path = dunireverse/ppx_accessor
+	url = https://github.com/janestreet/ppx_accessor.git
+[submodule "dunireverse/ppx_assert"]
+	path = dunireverse/ppx_assert
+	url = https://github.com/janestreet/ppx_assert.git
+[submodule "dunireverse/ppx_base"]
+	path = dunireverse/ppx_base
+	url = https://github.com/janestreet/ppx_base.git
+[submodule "dunireverse/ppx_bench"]
+	path = dunireverse/ppx_bench
+	url = https://github.com/janestreet/ppx_bench.git
+[submodule "dunireverse/ppx_bin_prot"]
+	path = dunireverse/ppx_bin_prot
+	url = https://github.com/janestreet/ppx_bin_prot.git
+[submodule "dunireverse/ppx_cold"]
+	path = dunireverse/ppx_cold
+	url = https://github.com/janestreet/ppx_cold.git
+[submodule "dunireverse/ppx_compare"]
+	path = dunireverse/ppx_compare
+	url = https://github.com/janestreet/ppx_compare.git
+[submodule "dunireverse/ppx_conv_func"]
+	path = dunireverse/ppx_conv_func
+	url = https://github.com/janestreet/ppx_conv_func.git
+[submodule "dunireverse/ppx_csv_conv"]
+	path = dunireverse/ppx_csv_conv
+	url = https://github.com/janestreet/ppx_csv_conv.git
+[submodule "dunireverse/ppx_custom_printf"]
+	path = dunireverse/ppx_custom_printf
+	url = https://github.com/janestreet/ppx_custom_printf.git
+[submodule "dunireverse/ppx_deriving_hardcaml"]
+	path = dunireverse/ppx_deriving_hardcaml
+	url = https://github.com/janestreet/ppx_deriving_hardcaml.git
+[submodule "dunireverse/ppx_enumerate"]
+	path = dunireverse/ppx_enumerate
+	url = https://github.com/janestreet/ppx_enumerate.git
+[submodule "dunireverse/ppx_expect"]
+	path = dunireverse/ppx_expect
+	url = https://github.com/janestreet/ppx_expect.git
+[submodule "dunireverse/ppx_fail"]
+	path = dunireverse/ppx_fail
+	url = https://github.com/janestreet/ppx_fail.git
+[submodule "dunireverse/ppx_fields_conv"]
+	path = dunireverse/ppx_fields_conv
+	url = https://github.com/janestreet/ppx_fields_conv.git
+[submodule "dunireverse/ppx_fixed_literal"]
+	path = dunireverse/ppx_fixed_literal
+	url = https://github.com/janestreet/ppx_fixed_literal.git
+[submodule "dunireverse/ppx_hash"]
+	path = dunireverse/ppx_hash
+	url = https://github.com/janestreet/ppx_hash.git
+[submodule "dunireverse/ppx_here"]
+	path = dunireverse/ppx_here
+	url = https://github.com/janestreet/ppx_here.git
+[submodule "dunireverse/ppx_inline_test"]
+	path = dunireverse/ppx_inline_test
+	url = https://github.com/janestreet/ppx_inline_test.git
+[submodule "dunireverse/ppx_jane"]
+	path = dunireverse/ppx_jane
+	url = https://github.com/janestreet/ppx_jane.git
+[submodule "dunireverse/ppx_js_style"]
+	path = dunireverse/ppx_js_style
+	url = https://github.com/janestreet/ppx_js_style.git
+[submodule "dunireverse/ppx_let"]
+	path = dunireverse/ppx_let
+	url = https://github.com/janestreet/ppx_let.git
+[submodule "dunireverse/ppx_log"]
+	path = dunireverse/ppx_log
+	url = https://github.com/janestreet/ppx_log.git
+[submodule "dunireverse/ppx_module_timer"]
+	path = dunireverse/ppx_module_timer
+	url = https://github.com/janestreet/ppx_module_timer.git
+[submodule "dunireverse/ppx_optcomp"]
+	path = dunireverse/ppx_optcomp
+	url = https://github.com/janestreet/ppx_optcomp.git
+[submodule "dunireverse/ppx_optional"]
+	path = dunireverse/ppx_optional
+	url = https://github.com/janestreet/ppx_optional.git
+[submodule "dunireverse/ppx_pattern_bind"]
+	path = dunireverse/ppx_pattern_bind
+	url = https://github.com/janestreet/ppx_pattern_bind.git
+[submodule "dunireverse/ppx_pipebang"]
+	path = dunireverse/ppx_pipebang
+	url = https://github.com/janestreet/ppx_pipebang.git
+[submodule "dunireverse/ppx_sexp_conv"]
+	path = dunireverse/ppx_sexp_conv
+	url = https://github.com/janestreet/ppx_sexp_conv.git
+[submodule "dunireverse/ppx_sexp_message"]
+	path = dunireverse/ppx_sexp_message
+	url = https://github.com/janestreet/ppx_sexp_message.git
+[submodule "dunireverse/ppx_sexp_value"]
+	path = dunireverse/ppx_sexp_value
+	url = https://github.com/janestreet/ppx_sexp_value.git
+[submodule "dunireverse/ppx_stable"]
+	path = dunireverse/ppx_stable
+	url = https://github.com/janestreet/ppx_stable.git
+[submodule "dunireverse/ppx_string"]
+	path = dunireverse/ppx_string
+	url = https://github.com/janestreet/ppx_string.git
+[submodule "dunireverse/ppx_typerep_conv"]
+	path = dunireverse/ppx_typerep_conv
+	url = https://github.com/janestreet/ppx_typerep_conv.git
+[submodule "dunireverse/ppx_variants_conv"]
+	path = dunireverse/ppx_variants_conv
+	url = https://github.com/janestreet/ppx_variants_conv.git
+[submodule "dunireverse/ppx_xml_conv"]
+	path = dunireverse/ppx_xml_conv
+	url = https://github.com/janestreet/ppx_xml_conv.git
+[submodule "dunireverse/ppx_yojson_conv"]
+	path = dunireverse/ppx_yojson_conv
+	url = https://github.com/janestreet/ppx_yojson_conv.git
+[submodule "dunireverse/toplevel_expect_test"]
+	path = dunireverse/toplevel_expect_test
+	url = https://github.com/janestreet/toplevel_expect_test.git
+[submodule "dunireverse/bisect_ppx"]
+	path = dunireverse/bisect_ppx
+	url = https://github.com/aantron/bisect_ppx.git
+[submodule "dunireverse/elpi"]
+	path = dunireverse/elpi
+	url = https://github.com/LPCIC/elpi.git
+[submodule "dunireverse/embedded_ocaml_templates"]
+	path = dunireverse/embedded_ocaml_templates
+	url = https://github.com/EmileTrotignon/embedded_ocaml_templates.git
+[submodule "dunireverse/fsml"]
+	path = dunireverse/fsml
+	url = https://github.com/jserot/fsml.git
+[submodule "dunireverse/gen_js_api"]
+	path = dunireverse/gen_js_api
+	url = https://github.com/LexiFi/gen_js_api.git
+[submodule "dunireverse/js_of_ocaml"]
+	path = dunireverse/js_of_ocaml
+	url = https://github.com/ocsigen/js_of_ocaml.git
+[submodule "dunireverse/let-if"]
+	path = dunireverse/let-if
+	url = https://github.com/reynir/let-if.git
+[submodule "dunireverse/logs-ppx"]
+	path = dunireverse/logs-ppx
+	url = https://github.com/ulrikstrid/logs-ppx.git
+[submodule "dunireverse/metapp"]
+	path = dunireverse/metapp
+	url = https://github.com/thierry-martinez/metapp.git
+[submodule "dunireverse/obus"]
+	path = dunireverse/obus
+	url = https://github.com/ocaml-community/obus.git
+[submodule "dunireverse/ocamlformat"]
+	path = dunireverse/ocamlformat
+	url = https://github.com/ocaml-ppx/ocamlformat.git
+[submodule "dunireverse/pacomb"]
+	path = dunireverse/pacomb
+	url = https://github.com/craff/pacomb.git
+[submodule "dunireverse/ppx-owl-opt"]
+	path = dunireverse/ppx-owl-opt
+	url = https://github.com/owlbarn/owl_opt.git
+[submodule "dunireverse/ppx_bap"]
+	path = dunireverse/ppx_bap
+	url = https://github.com/BinaryAnalysisPlatform/ppx_bap.git
+[submodule "dunireverse/ppx_bitstring"]
+	path = dunireverse/ppx_bitstring
+	url = https://github.com/xguerin/bitstring.git
+[submodule "dunireverse/ppx_blob"]
+	path = dunireverse/ppx_blob
+	url = https://github.com/johnwhitington/ppx_blob.git
+[submodule "dunireverse/ppx_const"]
+	path = dunireverse/ppx_const
+	url = https://github.com/mcclure/ppx_const.git
+[submodule "dunireverse/ppx_cstruct"]
+	path = dunireverse/ppx_cstruct
+	url = https://github.com/mirage/ocaml-cstruct.git
+[submodule "dunireverse/ppx_cstubs"]
+	path = dunireverse/ppx_cstubs
+	url = https://github.com/fdopen/ppx_cstubs.git
+[submodule "dunireverse/ppx_deriving"]
+	path = dunireverse/ppx_deriving
+	url = https://github.com/ocaml-ppx/ppx_deriving.git
+[submodule "dunireverse/ppx_deriving_protobuf"]
+	path = dunireverse/ppx_deriving_protobuf
+	url = https://github.com/ocaml-ppx/ppx_deriving_protobuf.git
+[submodule "dunireverse/ppx_deriving_yaml"]
+	path = dunireverse/ppx_deriving_yaml
+	url = https://github.com/patricoferris/ppx_deriving_yaml.git
+[submodule "dunireverse/ppx_deriving_yojson"]
+	path = dunireverse/ppx_deriving_yojson
+	url = https://github.com/ocaml-ppx/ppx_deriving_yojson.git
+[submodule "dunireverse/ppx_factory"]
+	path = dunireverse/ppx_factory
+	url = https://github.com/cryptosense/ppx_factory.git
+[submodule "dunireverse/ppx_getenv"]
+	path = dunireverse/ppx_getenv
+	url = https://github.com/ocaml-ppx/ppx_getenv.git
+[submodule "dunireverse/ppx_jsobject_conv"]
+	path = dunireverse/ppx_jsobject_conv
+	url = git://github.com/little-arhat/ppx_jsobject_conv.git
+[submodule "dunireverse/ppx_mysql"]
+	path = dunireverse/ppx_mysql
+	url = https://github.com/issuu/ppx_mysql.git
+[submodule "dunireverse/ppx_protocol_conv"]
+	path = dunireverse/ppx_protocol_conv
+	url = https://github.com/andersfugmann/ppx_protocol_conv
+[submodule "dunireverse/ppx_rapper"]
+	path = dunireverse/ppx_rapper
+	url = https://github.com/roddyyaga/ppx_rapper.git
+[submodule "dunireverse/ppx_repr"]
+	path = dunireverse/ppx_repr
+	url = https://github.com/mirage/repr.git
+[submodule "dunireverse/ppx_show"]
+	path = dunireverse/ppx_show
+	url = https://github.com/thierry-martinez/ppx_show.git
+[submodule "dunireverse/ppx_string_interpolation"]
+	path = dunireverse/ppx_string_interpolation
+	url = https://github.com/bloomberg/ppx_string_interpolation.git
+[submodule "dunireverse/ppx_yojson"]
+	path = dunireverse/ppx_yojson
+	url = https://github.com/NathanReb/ppx_yojson.git
+[submodule "dunireverse/scaml"]
+	path = dunireverse/scaml
+	url = https://gitlab.com/dailambda/scaml/
+[submodule "dunireverse/sedlex"]
+	path = dunireverse/sedlex
+	url = https://github.com/ocaml-community/sedlex.git
+[submodule "dunireverse/visitors"]
+	path = dunireverse/visitors
+	url = https://gitlab.inria.fr/fpottier/visitors.git
+[submodule "dunireverse/ppx_deriving_jsoo"]
+	path = dunireverse/ppx_deriving_jsoo
+	url = https://gitlab.com/o-labs/ppx_deriving_jsoo.git
+[submodule "dunireverse/ppx_deriving_encoding"]
+	path = dunireverse/ppx_deriving_encoding
+	url = https://gitlab.com/o-labs/ppx_deriving_encoding.git
+[submodule "dunireverse/OCanren"]
+	path = dunireverse/OCanren
+	url = git@github.com:JetBrains-Research/OCanren.git
+[submodule "dunireverse/lwt"]
+	path = dunireverse/lwt
+	url = https://github.com/ocsigen/lwt.git
