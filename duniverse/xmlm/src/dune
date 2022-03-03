@@ -1,0 +1,5 @@
+(library
+ (name xmlm)
+ (public_name xmlm)
+ (flags :standard -w -3-27-33-35-39)
+ (wrapped false))
