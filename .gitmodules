@@ -124,9 +124,6 @@
 [submodule "rev-deps/bistro"]
 	path = rev-deps/bistro
 	url = https://github.com/pveber/bistro.git
-[submodule "rev-deps/clangml"]
-	path = rev-deps/clangml
-	url = https://gitlab.inria.fr/memcad/clangml
 [submodule "rev-deps/ego"]
 	path = rev-deps/ego
 	url = https://gitlab.com/gopiandcode/ego.git
@@ -153,13 +150,13 @@
 	url = https://github.com/rvantonder/hack_parallel.git
 [submodule "rev-deps/js_of_ocaml"]
 	path = rev-deps/js_of_ocaml
-	url = https://github.com/ocsigen/js_of_ocaml.git
+	url = https://github.com/pitag-ha/js_of_ocaml.git
 [submodule "rev-deps/landmarks-ppx"]
 	path = rev-deps/landmarks-ppx
 	url = https://github.com/LexiFi/landmarks.git
 [submodule "rev-deps/lascar"]
 	path = rev-deps/lascar
-	url = https://github.com/jserot/lascar.git
+	url = https://github.com/pitag-ha/lascar.git
 [submodule "rev-deps/lens"]
 	path = rev-deps/lens
 	url = https://github.com/pdonadeo/ocaml-lens.git
@@ -192,7 +189,7 @@
 	url = https://github.com/ocaml-community/obus.git
 [submodule "rev-deps/ocaml-monadic"]
 	path = rev-deps/ocaml-monadic
-	url = https://github.com/zepalmer/ocaml-monadic.git
+	url = https://github.com/pitag-ha/ocaml-monadic.git
 [submodule "rev-deps/ocf_ppx"]
 	path = rev-deps/ocf_ppx
 	url = https://framagit.org/zoggy/ocf.git
@@ -342,7 +339,7 @@
 	url = https://github.com/green-labs/res_tailwindcss.git
 [submodule "rev-deps/sedlex"]
 	path = rev-deps/sedlex
-	url = https://github.com/ocaml-community/sedlex.git
+	url = https://github.com/pitag-ha/sedlex.git
 [submodule "rev-deps/spoc_ppx"]
 	path = rev-deps/spoc_ppx
 	url = https://github.com/mathiasbourgoin/SPOC.git

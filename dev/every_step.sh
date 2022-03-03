@@ -30,7 +30,7 @@ cd rev-deps/ &&
 git submodule add https://gitlab.com/o-labs/ppx_deriving_jsoo &&
 cd ..
 
-# re-add ppx_sexp_message without checking it out to the last release branch: seems like the git history on that repo has been messed up and now the release tags point to commits that don't exist anymore
+# re-add ppx_sexp_message without checking it out to the last release tag: seems like the git history on that repo has been messed up and now the release tags point to commits that don't exist anymore
 git submodule deinit -f -- rev-deps/ppx_sexp_message
 rm -rf .git/modules/rev-deps/ppx_sexp_message
 git rm -f rev-deps/ppx_sexp_message
@@ -86,6 +86,11 @@ git submodule deinit -f -- rev-deps/spoc_ppx
 rm -rf .git/modules/rev-deps/spoc_ppx
 git rm -f rev-deps/spoc_ppx
 
+# remove clangml: it's missing a `(modules_without_implementation clangml_config)` in its dune file and anyways, it's already removed from rev-deps/.deps and hence won't be compiled
+git submodule deinit -f -- rev-deps/clangml
+rm -rf .git/modules/rev-deps/clangml
+git rm -f rev-deps/clangml
+
 # checkout gospel to the commit before updating to cmdliner.1.1.0
 cd rev-deps/gospel &&
 git checkout bd54a5199a7f04dab149036eb9073f7b53b979fd &&
@@ -105,13 +110,19 @@ cd ../..
 # remove duplicates that are both in `rev-deps/` and `duniverse/` due to multi-package structures
 rm -rf duniverse/bitstring/ duniverse/gen_js_api/ duniverse/js_of_ocaml/ duniverse/landmarks/ duniverse/lwt/ duniverse/ocaml-cstruct/ duniverse/ocf/ duniverse/ppx_deriving/ duniverse/ppx_deriving_yojson/ duniverse/repr/ duniverse/tyxml/ duniverse/wtr/ duniverse/camlrack duniverse/ocaml-rpc duniverse/metapp duniverse/metaquot 
 
-# some things to do manually:
-# 1. add `(modules_without_implementation clangml_config)` to rev-deps/clangml/config/dune
-# 2. remove uchar from rev-deps/sedlex/src/lib/dune
-# 3. remove uchar from rev-deps/js_of_ocaml/lib/js_of_ocaml/dune
-# 4. remove `(public_name stdcompat)` from duniverse/stdcompat/dune
-# commit all those changes and push them to a remote to be available when cloning the submodule structure
+# manually remove `uchar` as a dependency from a couple of packages. for some reason dune doesn't seem to find the vendored uchar package and anyways we don't need backwards compatibility here
+# 1. remove uchar from rev-deps/sedlex/src/lib/dune
+# 2. remove uchar from rev-deps/js_of_ocaml/lib/js_of_ocaml/dune
+# (commit all those changes, push them to a remote, and make that remote the new url of the submodule)
 
 # work around a ctypes bug
 rm -rf duniverse/ocaml-ctypes/ duniverse/ocaml-integers/ duniverse/bigarray-compat/ duniverse/stdlib-shims/
 opam install ctypes-foreign -y
+
+# re-add ppx_sexp_message without checking it out to the last release branch: seems like the git history on that repo has been messed up and now the release tags point to commits that don't exist anymore
+git submodule deinit -f -- rev-deps/ppx_sexp_message
+rm -rf .git/modules/rev-deps/ppx_sexp_message
+git rm -f rev-deps/ppx_sexp_message
+cd rev-deps
+
+# manually: run `./dev/helpers.sh build` once and embed the changes dune does to a couple of the opam files into the submodule structure
