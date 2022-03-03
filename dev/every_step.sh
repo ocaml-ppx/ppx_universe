@@ -30,6 +30,15 @@ cd rev-deps/ &&
 git submodule add https://gitlab.com/o-labs/ppx_deriving_jsoo &&
 cd ..
 
+# re-add ppx_sexp_message without checking it out to the last release branch: seems like the git history on that repo has been messed up and now the release tags point to commits that don't exist anymore
+git submodule deinit -f -- rev-deps/ppx_sexp_message
+rm -rf .git/modules/rev-deps/ppx_sexp_message
+git rm -f rev-deps/ppx_sexp_message
+cd rev-deps &&
+git submodule add https://github.com/janestreet/ppx_sexp_message.git ppx_sexp_message &&
+cd ..
+
+
 # remove different copies of the same multi-package repos
 git submodule deinit -f -- rev-deps/js_of_ocaml-*
 rm -rf .git/modules/rev-deps/js_of_ocaml-*
@@ -72,12 +81,10 @@ cd rev-deps/ppxx/ &&
 git checkout master &&
 cd ../..
 
-# remove an empty opam file in spoc_ppx. Additionally to that empty opam file, it also has a correct opam file
-cd rev-deps/spoc_ppx &&
-(rm Spoc/spoc.opam || true) &&
-(git add Spoc/spoc.opam || true) &&
-(git commit -m "Remove empty opam file" || true) &&
-cd ../..
+# remove spoc_ppx: having it in the work space messes with dune since it has an empty opam file in addition to the correct opam file and anyways, it's already removed from rev-deps/.deps and hence won't be compiled
+git submodule deinit -f -- rev-deps/spoc_ppx
+rm -rf .git/modules/rev-deps/spoc_ppx
+git rm -f rev-deps/spoc_ppx
 
 # checkout gospel to the commit before updating to cmdliner.1.1.0
 cd rev-deps/gospel &&

@@ -1,0 +1,366 @@
+[submodule "rev-deps/base_quickcheck"]
+	path = rev-deps/base_quickcheck
+	url = https://github.com/janestreet/base_quickcheck.git
+[submodule "rev-deps/hardcaml"]
+	path = rev-deps/hardcaml
+	url = https://github.com/janestreet/hardcaml.git
+[submodule "rev-deps/mlt_parser"]
+	path = rev-deps/mlt_parser
+	url = https://github.com/janestreet/mlt_parser.git
+[submodule "rev-deps/ppx_accessor"]
+	path = rev-deps/ppx_accessor
+	url = https://github.com/janestreet/ppx_accessor.git
+[submodule "rev-deps/ppx_assert"]
+	path = rev-deps/ppx_assert
+	url = https://github.com/janestreet/ppx_assert.git
+[submodule "rev-deps/ppx_base"]
+	path = rev-deps/ppx_base
+	url = https://github.com/janestreet/ppx_base.git
+[submodule "rev-deps/ppx_bench"]
+	path = rev-deps/ppx_bench
+	url = https://github.com/janestreet/ppx_bench.git
+[submodule "rev-deps/ppx_bin_prot"]
+	path = rev-deps/ppx_bin_prot
+	url = https://github.com/janestreet/ppx_bin_prot.git
+[submodule "rev-deps/ppx_cold"]
+	path = rev-deps/ppx_cold
+	url = https://github.com/janestreet/ppx_cold.git
+[submodule "rev-deps/ppx_compare"]
+	path = rev-deps/ppx_compare
+	url = https://github.com/janestreet/ppx_compare.git
+[submodule "rev-deps/ppx_conv_func"]
+	path = rev-deps/ppx_conv_func
+	url = https://github.com/janestreet/ppx_conv_func.git
+[submodule "rev-deps/ppx_csv_conv"]
+	path = rev-deps/ppx_csv_conv
+	url = https://github.com/janestreet/ppx_csv_conv.git
+[submodule "rev-deps/ppx_custom_printf"]
+	path = rev-deps/ppx_custom_printf
+	url = https://github.com/janestreet/ppx_custom_printf.git
+[submodule "rev-deps/ppx_deriving_hardcaml"]
+	path = rev-deps/ppx_deriving_hardcaml
+	url = https://github.com/janestreet/ppx_deriving_hardcaml.git
+[submodule "rev-deps/ppx_enumerate"]
+	path = rev-deps/ppx_enumerate
+	url = https://github.com/janestreet/ppx_enumerate.git
+[submodule "rev-deps/ppx_expect"]
+	path = rev-deps/ppx_expect
+	url = https://github.com/janestreet/ppx_expect.git
+[submodule "rev-deps/ppx_fail"]
+	path = rev-deps/ppx_fail
+	url = https://github.com/janestreet/ppx_fail.git
+[submodule "rev-deps/ppx_fields_conv"]
+	path = rev-deps/ppx_fields_conv
+	url = https://github.com/janestreet/ppx_fields_conv.git
+[submodule "rev-deps/ppx_fixed_literal"]
+	path = rev-deps/ppx_fixed_literal
+	url = https://github.com/janestreet/ppx_fixed_literal.git
+[submodule "rev-deps/ppx_hash"]
+	path = rev-deps/ppx_hash
+	url = https://github.com/janestreet/ppx_hash.git
+[submodule "rev-deps/ppx_here"]
+	path = rev-deps/ppx_here
+	url = https://github.com/janestreet/ppx_here.git
+[submodule "rev-deps/ppx_inline_test"]
+	path = rev-deps/ppx_inline_test
+	url = https://github.com/janestreet/ppx_inline_test.git
+[submodule "rev-deps/ppx_jane"]
+	path = rev-deps/ppx_jane
+	url = https://github.com/janestreet/ppx_jane.git
+[submodule "rev-deps/ppx_js_style"]
+	path = rev-deps/ppx_js_style
+	url = https://github.com/janestreet/ppx_js_style.git
+[submodule "rev-deps/ppx_let"]
+	path = rev-deps/ppx_let
+	url = https://github.com/janestreet/ppx_let.git
+[submodule "rev-deps/ppx_log"]
+	path = rev-deps/ppx_log
+	url = https://github.com/janestreet/ppx_log.git
+[submodule "rev-deps/ppx_module_timer"]
+	path = rev-deps/ppx_module_timer
+	url = https://github.com/janestreet/ppx_module_timer.git
+[submodule "rev-deps/ppx_optcomp"]
+	path = rev-deps/ppx_optcomp
+	url = https://github.com/janestreet/ppx_optcomp.git
+[submodule "rev-deps/ppx_optional"]
+	path = rev-deps/ppx_optional
+	url = https://github.com/janestreet/ppx_optional.git
+[submodule "rev-deps/ppx_pattern_bind"]
+	path = rev-deps/ppx_pattern_bind
+	url = https://github.com/janestreet/ppx_pattern_bind.git
+[submodule "rev-deps/ppx_pipebang"]
+	path = rev-deps/ppx_pipebang
+	url = https://github.com/janestreet/ppx_pipebang.git
+[submodule "rev-deps/ppx_sexp_conv"]
+	path = rev-deps/ppx_sexp_conv
+	url = https://github.com/janestreet/ppx_sexp_conv.git
+[submodule "rev-deps/ppx_sexp_value"]
+	path = rev-deps/ppx_sexp_value
+	url = https://github.com/janestreet/ppx_sexp_value.git
+[submodule "rev-deps/ppx_stable"]
+	path = rev-deps/ppx_stable
+	url = https://github.com/janestreet/ppx_stable.git
+[submodule "rev-deps/ppx_string"]
+	path = rev-deps/ppx_string
+	url = https://github.com/janestreet/ppx_string.git
+[submodule "rev-deps/ppx_typerep_conv"]
+	path = rev-deps/ppx_typerep_conv
+	url = https://github.com/janestreet/ppx_typerep_conv.git
+[submodule "rev-deps/ppx_variants_conv"]
+	path = rev-deps/ppx_variants_conv
+	url = https://github.com/janestreet/ppx_variants_conv.git
+[submodule "rev-deps/ppx_xml_conv"]
+	path = rev-deps/ppx_xml_conv
+	url = https://github.com/janestreet/ppx_xml_conv.git
+[submodule "rev-deps/ppx_yojson_conv"]
+	path = rev-deps/ppx_yojson_conv
+	url = https://github.com/janestreet/ppx_yojson_conv.git
+[submodule "rev-deps/toplevel_expect_test"]
+	path = rev-deps/toplevel_expect_test
+	url = https://github.com/janestreet/toplevel_expect_test.git
+[submodule "rev-deps/bisect_ppx"]
+	path = rev-deps/bisect_ppx
+	url = https://github.com/aantron/bisect_ppx.git
+[submodule "rev-deps/bistro"]
+	path = rev-deps/bistro
+	url = https://github.com/pveber/bistro.git
+[submodule "rev-deps/clangml"]
+	path = rev-deps/clangml
+	url = https://gitlab.inria.fr/memcad/clangml
+[submodule "rev-deps/ego"]
+	path = rev-deps/ego
+	url = https://gitlab.com/gopiandcode/ego.git
+[submodule "rev-deps/embedded_ocaml_templates"]
+	path = rev-deps/embedded_ocaml_templates
+	url = https://github.com/EmileTrotignon/embedded_ocaml_templates.git
+[submodule "rev-deps/extunix"]
+	path = rev-deps/extunix
+	url = https://github.com/ygrek/extunix.git
+[submodule "rev-deps/fsml"]
+	path = rev-deps/fsml
+	url = https://github.com/jserot/fsml.git
+[submodule "rev-deps/GT"]
+	path = rev-deps/GT
+	url = https://github.com/JetBrains-Research/GT.git
+[submodule "rev-deps/gen_js_api"]
+	path = rev-deps/gen_js_api
+	url = https://github.com/LexiFi/gen_js_api.git
+[submodule "rev-deps/gospel"]
+	path = rev-deps/gospel
+	url = git://github.com/ocaml-gospel/gospel
+[submodule "rev-deps/hack_parallel"]
+	path = rev-deps/hack_parallel
+	url = https://github.com/rvantonder/hack_parallel.git
+[submodule "rev-deps/js_of_ocaml"]
+	path = rev-deps/js_of_ocaml
+	url = https://github.com/ocsigen/js_of_ocaml.git
+[submodule "rev-deps/landmarks-ppx"]
+	path = rev-deps/landmarks-ppx
+	url = https://github.com/LexiFi/landmarks.git
+[submodule "rev-deps/lascar"]
+	path = rev-deps/lascar
+	url = https://github.com/jserot/lascar.git
+[submodule "rev-deps/lens"]
+	path = rev-deps/lens
+	url = https://github.com/pdonadeo/ocaml-lens.git
+[submodule "rev-deps/let-if"]
+	path = rev-deps/let-if
+	url = https://github.com/reynir/let-if.git
+[submodule "rev-deps/logs-ppx"]
+	path = rev-deps/logs-ppx
+	url = https://github.com/ulrikstrid/logs-ppx.git
+[submodule "rev-deps/lwt_ppx"]
+	path = rev-deps/lwt_ppx
+	url = https://github.com/ocsigen/lwt.git
+[submodule "rev-deps/metapp"]
+	path = rev-deps/metapp
+	url = https://github.com/thierry-martinez/metapp.git
+[submodule "rev-deps/metaquot"]
+	path = rev-deps/metaquot
+	url = https://github.com/thierry-martinez/metaquot.git
+[submodule "rev-deps/node_of_ocaml"]
+	path = rev-deps/node_of_ocaml
+	url = https://github.com/emilienlemaire/node_of_ocaml.git
+[submodule "rev-deps/nuscr"]
+	path = rev-deps/nuscr
+	url = https://github.com/nuscr/nuscr.git
+[submodule "rev-deps/OCanren-ppx"]
+	path = rev-deps/OCanren-ppx
+	url = https://github.com/JetBrains-Research/OCanren.git
+[submodule "rev-deps/obus"]
+	path = rev-deps/obus
+	url = https://github.com/ocaml-community/obus.git
+[submodule "rev-deps/ocaml-monadic"]
+	path = rev-deps/ocaml-monadic
+	url = https://github.com/zepalmer/ocaml-monadic.git
+[submodule "rev-deps/ocf_ppx"]
+	path = rev-deps/ocf_ppx
+	url = https://framagit.org/zoggy/ocf.git
+[submodule "rev-deps/ocsigen-i18n"]
+	path = rev-deps/ocsigen-i18n
+	url = https://github.com/besport/ocsigen-i18n.git
+[submodule "rev-deps/ocsigen-ppx-rpc"]
+	path = rev-deps/ocsigen-ppx-rpc
+	url = https://github.com/ocsigen/ocsigen-ppx-rpc.git
+[submodule "rev-deps/override"]
+	path = rev-deps/override
+	url = https://github.com/thierry-martinez/override
+[submodule "rev-deps/pacomb"]
+	path = rev-deps/pacomb
+	url = https://github.com/craff/pacomb.git
+[submodule "rev-deps/pgocaml_ppx"]
+	path = rev-deps/pgocaml_ppx
+	url = https://github.com/darioteixeira/pgocaml.git
+[submodule "rev-deps/pla"]
+	path = rev-deps/pla
+	url = https://github.com/modlfo/pla.git
+[submodule "rev-deps/ppx-owl-opt"]
+	path = rev-deps/ppx-owl-opt
+	url = https://github.com/owlbarn/owl_opt.git
+[submodule "rev-deps/ppx_bap"]
+	path = rev-deps/ppx_bap
+	url = https://github.com/BinaryAnalysisPlatform/ppx_bap.git
+[submodule "rev-deps/ppx_bitstring"]
+	path = rev-deps/ppx_bitstring
+	url = https://github.com/xguerin/bitstring.git
+[submodule "rev-deps/ppx_blob"]
+	path = rev-deps/ppx_blob
+	url = https://github.com/johnwhitington/ppx_blob.git
+[submodule "rev-deps/ppx_camlrack"]
+	path = rev-deps/ppx_camlrack
+	url = https://github.com/pdarragh/camlrack.git
+[submodule "rev-deps/ppx_compose"]
+	path = rev-deps/ppx_compose
+	url = https://github.com/paurkedal/ppx_compose.git
+[submodule "rev-deps/ppx_const"]
+	path = rev-deps/ppx_const
+	url = https://github.com/mcclure/ppx_const.git
+[submodule "rev-deps/ppx_cstruct"]
+	path = rev-deps/ppx_cstruct
+	url = https://github.com/mirage/ocaml-cstruct.git
+[submodule "rev-deps/ppx_defer"]
+	path = rev-deps/ppx_defer
+	url = https://github.com/hcarty/ppx_defer.git
+[submodule "rev-deps/ppx_deriving"]
+	path = rev-deps/ppx_deriving
+	url = https://github.com/ocaml-ppx/ppx_deriving.git
+[submodule "rev-deps/ppx_deriving_cmdliner"]
+	path = rev-deps/ppx_deriving_cmdliner
+	url = https://github.com/hammerlab/ppx_deriving_cmdliner.git
+[submodule "rev-deps/ppx_deriving_hash"]
+	path = rev-deps/ppx_deriving_hash
+	url = https://github.com/sim642/ppx_deriving_hash.git
+[submodule "rev-deps/ppx_deriving_popper"]
+	path = rev-deps/ppx_deriving_popper
+	url = https://github.com/jobjo/popper.git
+[submodule "rev-deps/ppx_deriving_protobuf"]
+	path = rev-deps/ppx_deriving_protobuf
+	url = https://github.com/ocaml-ppx/ppx_deriving_protobuf.git
+[submodule "rev-deps/ppx_deriving_rpc"]
+	path = rev-deps/ppx_deriving_rpc
+	url = git://github.com/mirage/ocaml-rpc
+[submodule "rev-deps/ppx_deriving_scad"]
+	path = rev-deps/ppx_deriving_scad
+	url = https://github.com/geoffder/ppx_deriving_scad.git
+[submodule "rev-deps/ppx_deriving_yaml"]
+	path = rev-deps/ppx_deriving_yaml
+	url = https://github.com/patricoferris/ppx_deriving_yaml.git
+[submodule "rev-deps/ppx_deriving_yojson"]
+	path = rev-deps/ppx_deriving_yojson
+	url = https://github.com/ocaml-ppx/ppx_deriving_yojson.git
+[submodule "rev-deps/ppx_distr_guards"]
+	path = rev-deps/ppx_distr_guards
+	url = https://github.com/vogler/ppx_distr_guards.git
+[submodule "rev-deps/ppx_factory"]
+	path = rev-deps/ppx_factory
+	url = https://github.com/cryptosense/ppx_factory.git
+[submodule "rev-deps/ppx_gen_rec"]
+	path = rev-deps/ppx_gen_rec
+	url = https://github.com/flowtype/ocaml-ppx_gen_rec.git
+[submodule "rev-deps/ppx_getenv"]
+	path = rev-deps/ppx_getenv
+	url = https://github.com/ocaml-ppx/ppx_getenv.git
+[submodule "rev-deps/ppx_import"]
+	path = rev-deps/ppx_import
+	url = https://github.com/ocaml-ppx/ppx_import.git
+[submodule "rev-deps/ppx_inline_alcotest"]
+	path = rev-deps/ppx_inline_alcotest
+	url = https://github.com/pitag-ha/Fork-of-ppx-inline-alcotest.git
+[submodule "rev-deps/ppx_irmin"]
+	path = rev-deps/ppx_irmin
+	url = https://github.com/mirage/irmin.git
+[submodule "rev-deps/ppx_jsobject_conv"]
+	path = rev-deps/ppx_jsobject_conv
+	url = https://github.com/little-arhat/ppx_jsobject_conv.git
+[submodule "rev-deps/ppx_make"]
+	path = rev-deps/ppx_make
+	url = https://github.com/bn-d/ppx_make.git
+[submodule "rev-deps/ppx_matches"]
+	path = rev-deps/ppx_matches
+	url = https://github.com/wrbs/ppx_matches
+[submodule "rev-deps/ppx_monad"]
+	path = rev-deps/ppx_monad
+	url = https://github.com/Niols/ppx_monad.git
+[submodule "rev-deps/ppx_mysql"]
+	path = rev-deps/ppx_mysql
+	url = https://github.com/issuu/ppx_mysql.git
+[submodule "rev-deps/ppx_protocol_conv"]
+	path = rev-deps/ppx_protocol_conv
+	url = https://github.com/andersfugmann/ppx_protocol_conv
+[submodule "rev-deps/ppx_pyformat"]
+	path = rev-deps/ppx_pyformat
+	url = https://github.com/bn-d/ppx_pyformat.git
+[submodule "rev-deps/ppx_rapper"]
+	path = rev-deps/ppx_rapper
+	url = https://github.com/roddyyaga/ppx_rapper.git
+[submodule "rev-deps/ppx_repr"]
+	path = rev-deps/ppx_repr
+	url = https://github.com/mirage/repr.git
+[submodule "rev-deps/ppx_seq"]
+	path = rev-deps/ppx_seq
+	url = https://git.sr.ht/~hyphens/ppx_seq
+[submodule "rev-deps/ppx_show"]
+	path = rev-deps/ppx_show
+	url = https://github.com/thierry-martinez/ppx_show.git
+[submodule "rev-deps/ppx_string_interpolation"]
+	path = rev-deps/ppx_string_interpolation
+	url = https://github.com/bloomberg/ppx_string_interpolation.git
+[submodule "rev-deps/ppx_units"]
+	path = rev-deps/ppx_units
+	url = git://github.com/SGrondin/ppx_units
+[submodule "rev-deps/ppx_yojson"]
+	path = rev-deps/ppx_yojson
+	url = https://github.com/NathanReb/ppx_yojson.git
+[submodule "rev-deps/ppxx"]
+	path = rev-deps/ppxx
+	url = https://gitlab.com/camlspotter/ppxx
+[submodule "rev-deps/rdf_ppx"]
+	path = rev-deps/rdf_ppx
+	url = https://framagit.org/zoggy/ocaml-rdf.git
+[submodule "rev-deps/res_tailwindcss"]
+	path = rev-deps/res_tailwindcss
+	url = https://github.com/green-labs/res_tailwindcss.git
+[submodule "rev-deps/sedlex"]
+	path = rev-deps/sedlex
+	url = https://github.com/ocaml-community/sedlex.git
+[submodule "rev-deps/spoc_ppx"]
+	path = rev-deps/spoc_ppx
+	url = https://github.com/mathiasbourgoin/SPOC.git
+[submodule "rev-deps/tyxml-ppx"]
+	path = rev-deps/tyxml-ppx
+	url = https://github.com/ocsigen/tyxml.git
+[submodule "rev-deps/visitors"]
+	path = rev-deps/visitors
+	url = https://gitlab.inria.fr/fpottier/visitors.git
+[submodule "rev-deps/wtr-ppx"]
+	path = rev-deps/wtr-ppx
+	url = https://github.com/lemaetech/wtr.git
+[submodule "rev-deps/xtmpl_ppx"]
+	path = rev-deps/xtmpl_ppx
+	url = https://framagit.org/zoggy/xtmpl.git
+[submodule "rev-deps/ppx_deriving_jsoo"]
+	path = rev-deps/ppx_deriving_jsoo
+	url = https://gitlab.com/o-labs/ppx_deriving_jsoo
+[submodule "rev-deps/ppx_sexp_message"]
+	path = rev-deps/ppx_sexp_message
+	url = https://github.com/janestreet/ppx_sexp_message.git
