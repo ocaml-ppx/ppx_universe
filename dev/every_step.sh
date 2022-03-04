@@ -129,3 +129,5 @@ rm -rf duniverse/stdcompat
 opam install stdcompat
 
 # manually: run `./dev/helpers.sh build` once and embed the changes dune does to a couple of the opam files into the submodule structure
+
+# separate out the JS reverse dependencies from rev-deps/.deps into rev-deps/.js-deps

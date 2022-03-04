@@ -91,6 +91,21 @@ build () {
       PACKAGES="$PACKAGES $dir/$basename.install"
     fi
   done < rev-deps/.deps
+  if [[ ! $1 == "non-js" ]]
+  then
+    echo "Building all packages in the universe:"
+    while read line
+    do
+      if [[ ! -z "$line" ]]
+      then
+        basename=${line%%.*}
+        dir=$(find rev-deps/ -name "$basename.opam" -exec dirname {} \;)
+        PACKAGES="$PACKAGES $dir/$basename.install"
+      fi
+    done < rev-deps/.js-deps
+  else
+    echo "Only building non Jane Street packages:"
+  fi
   echo $PACKAGES
   dune build --profile release $PACKAGES
 }
@@ -103,6 +118,7 @@ list_required_by () {
     then
       basename=${line%%.*}
       echo $ALL_REV_DEPS | grep -o $basename || true
+      
     fi
   done < rev-deps/.deps
 }
@@ -175,7 +191,7 @@ case $1 in
     install_deps "$SND_ARG"
     ;;
   build)
-    build
+    build "$SND_ARG"
     ;;
   list-required-by)
     list_required_by "$SND_ARG"
