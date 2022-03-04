@@ -89,10 +89,68 @@ module Default : sig
   include
     Ast_builder_intf.Additional_helpers
       with type 'a with_loc := 'a Ast_builder_intf.with_location
+
+  module V2 : sig
+    val ppat_construct :
+      loc:location ->
+      longident loc ->
+      (label loc list * pattern) option ->
+      pattern
+
+    val pconstruct :
+      constructor_declaration -> (label loc list * pattern) option -> pattern
+
+    val constructor_declaration :
+      loc:location ->
+      name:label loc ->
+      vars:label loc list ->
+      args:constructor_arguments ->
+      res:core_type option ->
+      constructor_declaration
+  end
+
+  val ppat_construct :
+    loc:location -> longident loc -> pattern option -> pattern
+
+  val pconstruct : constructor_declaration -> pattern option -> pattern
+
+  val constructor_declaration :
+    loc:location ->
+    name:label loc ->
+    args:constructor_arguments ->
+    res:core_type option ->
+    constructor_declaration
 end
 
 module type Loc = Ast_builder_intf.Loc
-module type S = Ast_builder_intf.S
+
+module type S = sig
+  include Ast_builder_intf.S
+
+  module V2 : sig
+    val ppat_construct :
+      longident loc -> (label loc list * pattern) option -> pattern
+
+    val pconstruct :
+      constructor_declaration -> (label loc list * pattern) option -> pattern
+
+    val constructor_declaration :
+      name:label loc ->
+      vars:label loc list ->
+      args:constructor_arguments ->
+      res:core_type option ->
+      constructor_declaration
+  end
+
+  val ppat_construct : longident loc -> pattern option -> pattern
+  val pconstruct : constructor_declaration -> pattern option -> pattern
+
+  val constructor_declaration :
+    name:label loc ->
+    args:constructor_arguments ->
+    res:core_type option ->
+    constructor_declaration
+end
 
 (** Build Ast helpers with the location argument factorized. *)
 module Make (Loc : Loc) : S

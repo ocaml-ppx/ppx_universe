@@ -40,7 +40,10 @@ module type Additional_helpers = sig
   val esequence : (expression list -> expression) with_loc
   val ppat_tuple_opt : (pattern list -> pattern option) with_loc
   val pexp_tuple_opt : (expression list -> expression option) with_loc
-  val pconstruct : constructor_declaration -> pattern option -> pattern
+
+  val pconstruct :
+    constructor_declaration -> (string loc list * pattern) option -> pattern
+
   val econstruct : constructor_declaration -> expression option -> expression
   val elist : (expression list -> expression) with_loc
   val plist : (pattern list -> pattern) with_loc
