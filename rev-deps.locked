@@ -3,6 +3,7 @@ synopsis: "opam-monorepo generated lockfile"
 maintainer: "opam-monorepo"
 depends: [
   "accessor" {= "v0.14.1"}
+  "alcotest" {= "1.5.0"}
   "angstrom" {= "0.15.0"}
   "astring" {= "0.8.5+dune"}
   "async_kernel" {= "v0.14.0"}
@@ -38,6 +39,7 @@ depends: [
   "either" {= "1.0.0"}
   "fieldslib" {= "v0.14.0"}
   "findlib" {= "1.8.1+dune"}
+  "fix" {= "20220121"}
   "fmt" {= "0.8.10+dune"}
   "fpath" {= "0.7.3+dune"}
   "gen" {= "1.0"}
@@ -56,6 +58,7 @@ depends: [
   "menhir" {= "20220210"}
   "menhirLib" {= "20220210"}
   "menhirSdk" {= "20220210"}
+  "metapp" {= "0.4.2"}
   "mirage-no-solo5" {= "1"}
   "mirage-no-xen" {= "1"}
   "mmap" {= "1.2.0"}
@@ -79,6 +82,7 @@ depends: [
   "ppx_yojson_conv_lib" {= "v0.14.0"}
   "re" {= "1.10.3"}
   "react" {= "1.2.1+dune"}
+  "refl" {= "0.4.0"}
   "repr" {= "0.6.0"}
   "result" {= "1.5"}
   "rpclib" {= "8.1.2"}
@@ -88,6 +92,7 @@ depends: [
   "sexplib0" {= "v0.14.0"}
   "spawn" {= "v0.15.0"}
   "splittable_random" {= "v0.14.0"}
+  "stdcompat" {= "18+dune"}
   "stdio" {= "v0.14.0"}
   "stdlib-shims" {= "0.3.0"}
   "stringext" {= "1.6.0"}
@@ -95,6 +100,7 @@ depends: [
   "timezone" {= "v0.14.0"}
   "toplevel_backend" {= "v0.14.0"}
   "topological_sort" {= "v0.14.0"}
+  "traverse" {= "0.3.0"}
   "typerep" {= "v0.14.0"}
   "tyxml" {= "4.5.0"}
   "uchar" {= "0.0.2+dune"}
@@ -157,6 +163,10 @@ pin-depends: [
   [
     "accessor.v0.14.1"
     "https://github.com/janestreet/accessor/archive/v0.14.1.tar.gz"
+  ]
+  [
+    "alcotest.1.5.0"
+    "https://github.com/mirage/alcotest/releases/download/1.5.0/alcotest-js-1.5.0.tbz"
   ]
   [
     "angstrom.0.15.0"
@@ -242,7 +252,7 @@ pin-depends: [
   ]
   [
     "ctypes.0.17.1+dune"
-    "git+https://github.com/avsm/ocaml-ctypes.git#84711d6a7ed6ccec6e6f1b80f71580a2c289709c"
+    "git+https://github.com/avsm/ocaml-ctypes.git#3621e05d033a394c47c3fbe3649cced30ad22123"
   ]
   [
     "dune-configurator.3.0.2"
@@ -263,6 +273,10 @@ pin-depends: [
   [
     "findlib.1.8.1+dune"
     "https://github.com/dune-universe/lib-findlib/archive/v1.8.1+dune.tar.gz"
+  ]
+  [
+    "fix.20220121"
+    "https://gitlab.inria.fr/fpottier/fix/-/archive/20220121/archive.tar.gz"
   ]
   [
     "fmt.0.8.10+dune"
@@ -325,6 +339,10 @@ pin-depends: [
   [
     "menhirSdk.20220210"
     "https://gitlab.inria.fr/fpottier/menhir/-/archive/20220210/archive.tar.gz"
+  ]
+  [
+    "metapp.0.4.2"
+    "https://github.com/thierry-martinez/metapp/archive/refs/tags/v0.4.2.tar.gz"
   ]
   [
     "mmap.1.2.0"
@@ -392,6 +410,10 @@ pin-depends: [
     "https://github.com/dune-universe/react/archive/v1.2.1+dune.tar.gz"
   ]
   [
+    "refl.0.4.0"
+    "https://github.com/thierry-martinez/refl/archive/v0.4.0.tar.gz"
+  ]
+  [
     "repr.0.6.0"
     "https://github.com/mirage/repr/releases/download/0.6.0/repr-fuzz-0.6.0.tbz"
   ]
@@ -425,6 +447,10 @@ pin-depends: [
     "https://ocaml.janestreet.com/ocaml-core/v0.14/files/splittable_random-v0.14.0.tar.gz"
   ]
   [
+    "stdcompat.18+dune"
+    "https://github.com/thierry-martinez/stdcompat/releases/download/v18/stdcompat-18.tar.gz"
+  ]
+  [
     "stdio.v0.14.0"
     "https://ocaml.janestreet.com/ocaml-core/v0.14/files/stdio-v0.14.0.tar.gz"
   ]
@@ -451,6 +477,10 @@ pin-depends: [
   [
     "topological_sort.v0.14.0"
     "https://ocaml.janestreet.com/ocaml-core/v0.14/files/topological_sort-v0.14.0.tar.gz"
+  ]
+  [
+    "traverse.0.3.0"
+    "https://github.com/thierry-martinez/traverse/archive/v0.3.0.tar.gz"
   ]
   [
     "typerep.v0.14.0"
@@ -538,7 +568,7 @@ x-opam-monorepo-duniverse-dirs: [
     ["md5=192269afbcdcec655a3ec4f0067c834b"]
   ]
   [
-    "git+https://github.com/avsm/ocaml-ctypes.git#84711d6a7ed6ccec6e6f1b80f71580a2c289709c"
+    "git+https://github.com/avsm/ocaml-ctypes.git#3621e05d033a394c47c3fbe3649cced30ad22123"
     "ocaml-ctypes"
   ]
   [
@@ -759,6 +789,14 @@ x-opam-monorepo-duniverse-dirs: [
     ]
   ]
   [
+    "https://github.com/mirage/alcotest/releases/download/1.5.0/alcotest-js-1.5.0.tbz"
+    "alcotest"
+    [
+      "sha256=54281907e02d78995df246dc2e10ed182828294ad2059347a1e3a13354848f6c"
+      "sha512=1aea91de40795ec4f6603d510107e4b663c1a94bd223f162ad231316d8595e9e098cabbe28a46bdcb588942f3d103d8377373d533bcc7413ba3868a577469b45"
+    ]
+  ]
+  [
     "https://github.com/mirage/bigarray-compat/releases/download/v1.1.0/bigarray-compat-1.1.0.tbz"
     "bigarray-compat"
     [
@@ -963,9 +1001,45 @@ x-opam-monorepo-duniverse-dirs: [
     ]
   ]
   [
+    "https://github.com/thierry-martinez/metapp/archive/refs/tags/v0.4.2.tar.gz"
+    "metapp"
+    [
+      "sha512=96b306b8de3cabc3a6cb7bf9850026f258580e6e1cf2e5dc453d60d79a8310e71786bf02ed2535182fb70614fde7a6786820378717fe15043c337c6755e76f18"
+    ]
+  ]
+  [
+    "https://github.com/thierry-martinez/refl/archive/v0.4.0.tar.gz"
+    "refl"
+    [
+      "sha512=c158970749c1b7bacb8af1f88f0304d8d6cb0f532d3f876734489c3c4220d00f4d5aac6066e6d385ee70e1810ec65ffd47f0197bd5a6080f4d688cb3a386dc0a"
+    ]
+  ]
+  [
+    "https://github.com/thierry-martinez/stdcompat/releases/download/v18/stdcompat-18.tar.gz"
+    "stdcompat"
+    [
+      "sha512=4323a43d906121951f62ee8da4dec2c3be30540bbdca114096fa3ca655ba05342b429343d0b51df6e8173541e255e3bfe57a047147b27bca1f6bb22a15ce0013"
+    ]
+  ]
+  [
+    "https://github.com/thierry-martinez/traverse/archive/v0.3.0.tar.gz"
+    "traverse"
+    [
+      "sha512=a29798bf912dc2c2ddce06aafc63f88fce4bf5dd35884c2e2c7b7caa1b2d8e95122e6f6d3b675965145853f530fad856740201f2f349561a15e78591a56e10fe"
+    ]
+  ]
+  [
     "https://github.com/xguerin/bitstring/archive/v4.1.0.tar.gz"
     "bitstring"
     ["md5=8ae6f04eaa29481c6830ee3be5cba755"]
+  ]
+  [
+    "https://gitlab.inria.fr/fpottier/fix/-/archive/20220121/archive.tar.gz"
+    "fix"
+    [
+      "md5=48d8a5bdff23cf7fbf9288877df2b6aa"
+      "sha512=a851d8783c0c519c6e55359a5c471af433058872409c29a1a7bdfd0076813341ad2c0ebd1ce9e28bff4d4c729dfbc808c41c084fe12a42b45a2b5e391e77ccd2"
+    ]
   ]
   [
     "https://gitlab.inria.fr/fpottier/menhir/-/archive/20220210/archive.tar.gz"
@@ -1086,6 +1160,7 @@ x-opam-monorepo-root-packages: [
   "let-if"
   "logs-ppx"
   "lwt_ppx"
+  "metaquot"
   "mlt_parser"
   "node_of_ocaml"
   "obus"
@@ -1093,7 +1168,9 @@ x-opam-monorepo-root-packages: [
   "ocf_ppx"
   "ocsigen-i18n"
   "ocsigen-ppx-rpc"
+  "override"
   "pacomb"
+  "pla"
   "ppx-owl-opt"
   "ppx_accessor"
   "ppx_assert"
@@ -1134,6 +1211,7 @@ x-opam-monorepo-root-packages: [
   "ppx_hash"
   "ppx_here"
   "ppx_import"
+  "ppx_inline_alcotest"
   "ppx_inline_test"
   "ppx_irmin"
   "ppx_jane"

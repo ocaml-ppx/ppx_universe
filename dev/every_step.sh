@@ -4,7 +4,9 @@ set -e
 # allow packages in the work space that don't directly build with dune, but have a dune port in the dune-universe
 opam repo add dune-universe git+https://github.com/dune-universe/opam-overlays.git
 
-# on pitag-ha's fork, there's also an opam-overlay for stdcompat. if we didn't add that, we'd discard 4 reverse dependencies that depend on stdcompat
+# to allow reverse dependencies that depend on stdcompat: add a fork of opam-overlays containing a broken opam-overlay for stdcompat.
+# that tricks opam-monorepo into into accepting packages that require stdcompat.
+# later, remove stdcompat from the duniverse and install it with opam (it doesn't have any dependencies)
 opam repo add dune-universe-pitag git+https://github.com/pitag-ha/opam-overlays.git
 
 opam update
@@ -69,11 +71,9 @@ sed -i '/spoc_ppx/d' rev-deps/.deps # (recursively) depends on camlp4, which doe
 sed -i '/GT/d' rev-deps/.deps # (recursively) depends on logger-p5, which doesn't build with dune and isn't on opam-overlays
 sed -i '/rdf_ppx/d' rev-deps/.deps # (recursively) depends on uucp >= 4.14.0, which doesn't build with dune. opam-overlays only has uucp.4.13.0
 sed -i '/ppx_deriving_popper/d' rev-deps/.deps # (recursively) depends on pringo, which doesn't build with dune and isn't on opam-overlays
-sed -i '/metapp/d' rev-deps/.deps # (recursively) depends on stdcompat, which doesn't doesnt' declare dune in it's opam file and isn't on opam-overlays. Tried adding stdcompat to opam-overlays, but that isn't straight-forward (dune complains about it having a public_name)
-sed -i '/metaquot/d' rev-deps/.deps # (recursively) depends on stdcompat, which doesn't doesnt' declare dune in it's opam file and isn't on opam-overlays. Tried adding stdcompat to opam-overlays, but that isn't straight-forward (dune complains about it having a public_name)
-sed -i '/override/d' rev-deps/.deps # (recursively) depends on stdcompat, which doesn't doesnt' declare dune in it's opam file and isn't on opam-overlays. Tried adding stdcompat to opam-overlays, but that isn't straight-forward (dune complains about it having a public_name)
-sed -i '/ppx_inline_alcotest/d' rev-deps/.deps # (recursively) depends on stdcompat, which doesn't doesnt' declare dune in it's opam file and isn't on opam-overlays. Tried adding stdcompat to opam-overlays, but that isn't straight-forward (dune complains about it having a public_name)
-sed -i '/pla/d' rev-deps/.deps # (recursively) depends on stdcompat, which doesn't doesnt' declare dune in it's opam file and isn't on opam-overlays. Tried adding stdcompat to opam-overlays, but that isn't straight-forward (dune complains about it having a public_name)
+sed -i '/metapp/d' rev-deps/.deps # has a build error "exception Fl_package_base.No_such_package("ocaml-compiler-libs.shadow", "required by `ppxlib'")""
+sed -i '/metaquot/d' rev-deps/.deps # depends on on metapp which has a build error
+sed -i '/override/d' rev-deps/.deps # depends on on metapp which has a build error
 sed -i '/js_of_ocaml-compiler/d' rev-deps/.deps # doesn't compile with ocaml.4.14.0
 
 # check out a branch of ppxx that depends on ppxlib and has a ppxx.opam file. It's default branch doesn't have an opam file.
@@ -108,8 +108,7 @@ cd ../..
 ./dev/helpers.sh install-deps
 
 # remove duplicates that are both in `rev-deps/` and `duniverse/` due to multi-package structures
-rm -rf duniverse/bitstring/ duniverse/gen_js_api/ duniverse/js_of_ocaml/ duniverse/landmarks/ duniverse/lwt/ duniverse/ocaml-cstruct/ duniverse/ocf/ duniverse/ppx_deriving/ duniverse/ppx_deriving_yojson/ duniverse/repr/ duniverse/tyxml/ duniverse/wtr/ duniverse/camlrack duniverse/ocaml-rpc duniverse/metapp duniverse/metaquot 
-
+rm -rf duniverse/bitstring/ duniverse/gen_js_api/ duniverse/js_of_ocaml/ duniverse/landmarks/ duniverse/lwt/ duniverse/ocaml-cstruct/ duniverse/ocf/ duniverse/ppx_deriving/ duniverse/ppx_deriving_yojson/ duniverse/repr/ duniverse/tyxml/ duniverse/wtr/ duniverse/camlrack duniverse/ocaml-rpc duniverse/metapp duniverse/metaquot
 # manually remove `uchar` as a dependency from a couple of packages. for some reason dune doesn't seem to find the vendored uchar package and anyways we don't need backwards compatibility here
 # 1. remove uchar from rev-deps/sedlex/src/lib/dune
 # 2. remove uchar from rev-deps/js_of_ocaml/lib/js_of_ocaml/dune
@@ -124,5 +123,9 @@ git submodule deinit -f -- rev-deps/ppx_sexp_message
 rm -rf .git/modules/rev-deps/ppx_sexp_message
 git rm -f rev-deps/ppx_sexp_message
 cd rev-deps
+
+# as mentioned above, remove stdcompat from the duniverse and install it with opam instead
+rm -rf duniverse/stdcompat
+opam install stdcompat
 
 # manually: run `./dev/helpers.sh build` once and embed the changes dune does to a couple of the opam files into the submodule structure
