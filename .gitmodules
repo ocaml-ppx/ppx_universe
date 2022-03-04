@@ -1,0 +1,141 @@
+[submodule "rev-deps/base_quickcheck"]
+	path = rev-deps/base_quickcheck
+	url = https://github.com/janestreet/base_quickcheck.git
+[submodule "rev-deps/hardcaml"]
+	path = rev-deps/hardcaml
+	url = https://github.com/janestreet/hardcaml.git
+[submodule "rev-deps/mlt_parser"]
+	path = rev-deps/mlt_parser
+	url = https://github.com/janestreet/mlt_parser.git
+[submodule "rev-deps/ppx_accessor"]
+	path = rev-deps/ppx_accessor
+	url = https://github.com/janestreet/ppx_accessor.git
+[submodule "rev-deps/ppx_assert"]
+	path = rev-deps/ppx_assert
+	url = https://github.com/janestreet/ppx_assert.git
+[submodule "rev-deps/ppx_base"]
+	path = rev-deps/ppx_base
+	url = https://github.com/janestreet/ppx_base.git
+[submodule "rev-deps/ppx_bench"]
+	path = rev-deps/ppx_bench
+	url = https://github.com/janestreet/ppx_bench.git
+[submodule "rev-deps/ppx_bin_prot"]
+	path = rev-deps/ppx_bin_prot
+	url = https://github.com/janestreet/ppx_bin_prot.git
+[submodule "rev-deps/ppx_cold"]
+	path = rev-deps/ppx_cold
+	url = https://github.com/janestreet/ppx_cold.git
+[submodule "rev-deps/ppx_compare"]
+	path = rev-deps/ppx_compare
+	url = https://github.com/janestreet/ppx_compare.git
+[submodule "rev-deps/ppx_conv_func"]
+	path = rev-deps/ppx_conv_func
+	url = https://github.com/janestreet/ppx_conv_func.git
+[submodule "rev-deps/ppx_csv_conv"]
+	path = rev-deps/ppx_csv_conv
+	url = https://github.com/janestreet/ppx_csv_conv.git
+[submodule "rev-deps/ppx_custom_printf"]
+	path = rev-deps/ppx_custom_printf
+	url = https://github.com/janestreet/ppx_custom_printf.git
+[submodule "rev-deps/ppx_deriving_hardcaml"]
+	path = rev-deps/ppx_deriving_hardcaml
+	url = https://github.com/janestreet/ppx_deriving_hardcaml.git
+[submodule "rev-deps/ppx_disable_unused_warnings"]
+	path = rev-deps/ppx_disable_unused_warnings
+	url = https://github.com/janestreet/ppx_disable_unused_warnings.git
+[submodule "rev-deps/ppx_enumerate"]
+	path = rev-deps/ppx_enumerate
+	url = https://github.com/janestreet/ppx_enumerate.git
+[submodule "rev-deps/ppx_expect"]
+	path = rev-deps/ppx_expect
+	url = https://github.com/janestreet/ppx_expect.git
+[submodule "rev-deps/ppx_fail"]
+	path = rev-deps/ppx_fail
+	url = https://github.com/janestreet/ppx_fail.git
+[submodule "rev-deps/ppx_fields_conv"]
+	path = rev-deps/ppx_fields_conv
+	url = https://github.com/janestreet/ppx_fields_conv.git
+[submodule "rev-deps/ppx_fixed_literal"]
+	path = rev-deps/ppx_fixed_literal
+	url = https://github.com/janestreet/ppx_fixed_literal.git
+[submodule "rev-deps/ppx_hash"]
+	path = rev-deps/ppx_hash
+	url = https://github.com/janestreet/ppx_hash.git
+[submodule "rev-deps/ppx_here"]
+	path = rev-deps/ppx_here
+	url = https://github.com/janestreet/ppx_here.git
+[submodule "rev-deps/ppx_ignore_instrumentation"]
+	path = rev-deps/ppx_ignore_instrumentation
+	url = https://github.com/janestreet/ppx_ignore_instrumentation.git
+[submodule "rev-deps/ppx_inline_test"]
+	path = rev-deps/ppx_inline_test
+	url = https://github.com/janestreet/ppx_inline_test.git
+[submodule "rev-deps/ppx_jane"]
+	path = rev-deps/ppx_jane
+	url = https://github.com/janestreet/ppx_jane.git
+[submodule "rev-deps/ppx_js_style"]
+	path = rev-deps/ppx_js_style
+	url = https://github.com/janestreet/ppx_js_style.git
+[submodule "rev-deps/ppx_jsonaf_conv"]
+	path = rev-deps/ppx_jsonaf_conv
+	url = https://github.com/janestreet/ppx_jsonaf_conv.git
+[submodule "rev-deps/ppx_let"]
+	path = rev-deps/ppx_let
+	url = https://github.com/janestreet/ppx_let.git
+[submodule "rev-deps/ppx_log"]
+	path = rev-deps/ppx_log
+	url = https://github.com/janestreet/ppx_log.git
+[submodule "rev-deps/ppx_module_timer"]
+	path = rev-deps/ppx_module_timer
+	url = https://github.com/janestreet/ppx_module_timer.git
+[submodule "rev-deps/ppx_optcomp"]
+	path = rev-deps/ppx_optcomp
+	url = https://github.com/janestreet/ppx_optcomp.git
+[submodule "rev-deps/ppx_optional"]
+	path = rev-deps/ppx_optional
+	url = https://github.com/janestreet/ppx_optional.git
+[submodule "rev-deps/ppx_pattern_bind"]
+	path = rev-deps/ppx_pattern_bind
+	url = https://github.com/janestreet/ppx_pattern_bind.git
+[submodule "rev-deps/ppx_pipebang"]
+	path = rev-deps/ppx_pipebang
+	url = https://github.com/janestreet/ppx_pipebang.git
+[submodule "rev-deps/ppx_python"]
+	path = rev-deps/ppx_python
+	url = https://github.com/janestreet/ppx_python.git
+[submodule "rev-deps/ppx_sexp_conv"]
+	path = rev-deps/ppx_sexp_conv
+	url = https://github.com/janestreet/ppx_sexp_conv.git
+[submodule "rev-deps/ppx_sexp_value"]
+	path = rev-deps/ppx_sexp_value
+	url = https://github.com/janestreet/ppx_sexp_value.git
+[submodule "rev-deps/ppx_stable"]
+	path = rev-deps/ppx_stable
+	url = https://github.com/janestreet/ppx_stable.git
+[submodule "rev-deps/ppx_string"]
+	path = rev-deps/ppx_string
+	url = https://github.com/janestreet/ppx_string.git
+[submodule "rev-deps/ppx_type_directed_value"]
+	path = rev-deps/ppx_type_directed_value
+	url = https://github.com/janestreet/ppx_type_directed_value.git
+[submodule "rev-deps/ppx_typed_fields"]
+	path = rev-deps/ppx_typed_fields
+	url = https://github.com/janestreet/ppx_typed_fields.git
+[submodule "rev-deps/ppx_typerep_conv"]
+	path = rev-deps/ppx_typerep_conv
+	url = https://github.com/janestreet/ppx_typerep_conv.git
+[submodule "rev-deps/ppx_variants_conv"]
+	path = rev-deps/ppx_variants_conv
+	url = https://github.com/janestreet/ppx_variants_conv.git
+[submodule "rev-deps/ppx_xml_conv"]
+	path = rev-deps/ppx_xml_conv
+	url = https://github.com/janestreet/ppx_xml_conv.git
+[submodule "rev-deps/ppx_yojson_conv"]
+	path = rev-deps/ppx_yojson_conv
+	url = https://github.com/janestreet/ppx_yojson_conv.git
+[submodule "rev-deps/toplevel_expect_test"]
+	path = rev-deps/toplevel_expect_test
+	url = https://github.com/janestreet/toplevel_expect_test.git
+[submodule "rev-deps/ppx_sexp_message"]
+	path = rev-deps/ppx_sexp_message
+	url = https://github.com/janestreet/ppx_sexp_message.git
