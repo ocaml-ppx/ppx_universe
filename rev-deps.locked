@@ -1,0 +1,698 @@
+opam-version: "2.0"
+synopsis: "opam-monorepo generated lockfile"
+maintainer: "opam-monorepo"
+depends: [
+  "accessor" {= "v0.15.0"}
+  "angstrom" {= "0.15.0"}
+  "base" {= "v0.15.0"}
+  "base-bigarray" {= "base"}
+  "base-threads" {= "base"}
+  "base-unix" {= "base"}
+  "base_bigstring" {= "v0.15.0"}
+  "bigarray-compat" {= "1.1.0"}
+  "bigstringaf" {= "0.8.0"}
+  "bin_prot" {= "v0.15.0"}
+  "biniou" {= "1.2.1"}
+  "conf-pkg-config" {= "2"}
+  "core" {= "v0.15.0"}
+  "core_kernel" {= "v0.15.0"}
+  "core_unix" {= "v0.15.0"}
+  "cppo" {= "1.6.8"}
+  "csexp" {= "1.5.1"}
+  "csvfields" {= "v0.15.0"}
+  "dune" {= "3.0.2"}
+  "dune-configurator" {= "3.0.2"}
+  "easy-format" {= "1.3.2"}
+  "expect_test_helpers_core" {= "v0.15.0"}
+  "faraday" {= "0.8.1"}
+  "fieldslib" {= "v0.15.0"}
+  "findlib" {= "1.8.1+dune"}
+  "higher_kinded" {= "v0.15.0"}
+  "int_repr" {= "v0.15.0"}
+  "jane-street-headers" {= "v0.15.0"}
+  "jsonaf" {= "v0.15.0"}
+  "jst-config" {= "v0.15.0"}
+  "num" {= "1.3+dune"}
+  "ocaml" {= "4.14.0"}
+  "ocaml-base-compiler" {= "4.14.0~beta1"}
+  "ocaml-compiler-libs" {= "v0.12.4"}
+  "ocaml-config" {= "2"}
+  "ocaml-options-vanilla" {= "1"}
+  "ocaml-syntax-shims" {= "1.0.0"}
+  "ocaml_intrinsics" {= "v0.15.0"}
+  "ocamlfind" {= "1.8.1+dune"}
+  "octavius" {= "1.2.2"}
+  "parsexp" {= "v0.15.0"}
+  "ppx_derivers" {= "1.2.1"}
+  "ppx_yojson_conv_lib" {= "v0.15.0"}
+  "pyml" {= "20211015"}
+  "re" {= "1.10.3"}
+  "result" {= "1.5"}
+  "seq" {= "base+dune"}
+  "sexp_pretty" {= "v0.15.0"}
+  "sexplib" {= "v0.15.0"}
+  "sexplib0" {= "v0.15.0"}
+  "spawn" {= "v0.15.0"}
+  "splittable_random" {= "v0.15.0"}
+  "stdcompat" {= "18+dune"}
+  "stdio" {= "v0.15.0"}
+  "stdlib-shims" {= "0.3.0"}
+  "time_now" {= "v0.15.0"}
+  "timezone" {= "v0.15.0"}
+  "toplevel_backend" {= "v0.15.0"}
+  "typerep" {= "v0.15.0"}
+  "variantslib" {= "v0.15.0"}
+  "yojson" {= "1.7.0"}
+]
+depexts: [
+  ["devel/pkgconf"] {os = "openbsd"}
+  ["linux-headers"] {os-distribution = "alpine"}
+  ["pkg-config"] {os-family = "debian"}
+  ["pkg-config"] {os = "macos" & os-distribution = "homebrew"}
+  ["pkgconf"] {os = "freebsd"}
+  ["pkgconf"] {os-distribution = "alpine"}
+  ["pkgconf"] {os-distribution = "arch"}
+  ["pkgconf-pkg-config"] {os-distribution = "fedora"}
+  ["pkgconf-pkg-config"] {os-distribution = "mageia"}
+  ["pkgconf-pkg-config"] {os-distribution = "centos" & os-version >= "8"}
+  ["pkgconf-pkg-config"] {os-distribution = "ol" & os-version >= "8"}
+  ["pkgconf-pkg-config"] {os-distribution = "rhel" & os-version >= "8"}
+  ["pkgconfig"] {os-distribution = "nixos"}
+  ["pkgconfig"] {os = "macos" & os-distribution = "macports"}
+  ["pkgconfig"] {os-distribution = "centos" & os-version <= "7"}
+  ["pkgconfig"] {os-distribution = "ol" & os-version <= "7"}
+  ["pkgconfig"] {os-distribution = "rhel" & os-version <= "7"}
+  ["system:pkgconf"] {os = "win32" & os-distribution = "cygwinports"}
+]
+pin-depends: [
+  [
+    "accessor.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/accessor-v0.15.0.tar.gz"
+  ]
+  [
+    "angstrom.0.15.0"
+    "https://github.com/inhabitedtype/angstrom/archive/0.15.0.tar.gz"
+  ]
+  [
+    "base.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/base-v0.15.0.tar.gz"
+  ]
+  [
+    "base_bigstring.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/base_bigstring-v0.15.0.tar.gz"
+  ]
+  [
+    "bigarray-compat.1.1.0"
+    "https://github.com/mirage/bigarray-compat/releases/download/v1.1.0/bigarray-compat-1.1.0.tbz"
+  ]
+  [
+    "bigstringaf.0.8.0"
+    "https://github.com/inhabitedtype/bigstringaf/archive/0.8.0.tar.gz"
+  ]
+  [
+    "bin_prot.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/bin_prot-v0.15.0.tar.gz"
+  ]
+  [
+    "biniou.1.2.1"
+    "https://github.com/mjambon/biniou/releases/download/1.2.1/biniou-1.2.1.tbz"
+  ]
+  [
+    "core.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core-v0.15.0.tar.gz"
+  ]
+  [
+    "core_kernel.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core_kernel-v0.15.0.tar.gz"
+  ]
+  [
+    "core_unix.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core_unix-v0.15.0.tar.gz"
+  ]
+  [
+    "cppo.1.6.8"
+    "https://github.com/ocaml-community/cppo/archive/v1.6.8.tar.gz"
+  ]
+  [
+    "csexp.1.5.1"
+    "https://github.com/ocaml-dune/csexp/releases/download/1.5.1/csexp-1.5.1.tbz"
+  ]
+  [
+    "csvfields.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/csvfields-v0.15.0.tar.gz"
+  ]
+  [
+    "dune-configurator.3.0.2"
+    "https://github.com/ocaml/dune/releases/download/3.0.2/fiber-3.0.2.tbz"
+  ]
+  [
+    "easy-format.1.3.2"
+    "https://github.com/mjambon/easy-format/releases/download/1.3.2/easy-format-1.3.2.tbz"
+  ]
+  [
+    "expect_test_helpers_core.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/expect_test_helpers_core-v0.15.0.tar.gz"
+  ]
+  [
+    "faraday.0.8.1"
+    "https://github.com/inhabitedtype/faraday/archive/0.8.1.tar.gz"
+  ]
+  [
+    "fieldslib.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/fieldslib-v0.15.0.tar.gz"
+  ]
+  [
+    "findlib.1.8.1+dune"
+    "https://github.com/dune-universe/lib-findlib/archive/v1.8.1+dune.tar.gz"
+  ]
+  [
+    "higher_kinded.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/higher_kinded-v0.15.0.tar.gz"
+  ]
+  [
+    "int_repr.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/int_repr-v0.15.0.tar.gz"
+  ]
+  [
+    "jane-street-headers.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jane-street-headers-v0.15.0.tar.gz"
+  ]
+  [
+    "jsonaf.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jsonaf-v0.15.0.tar.gz"
+  ]
+  [
+    "jst-config.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jst-config-v0.15.0.tar.gz"
+  ]
+  [
+    "num.1.3+dune"
+    "https://github.com/dune-universe/num/archive/v1.3+dune-2.tar.gz"
+  ]
+  [
+    "ocaml-compiler-libs.v0.12.4"
+    "https://github.com/janestreet/ocaml-compiler-libs/releases/download/v0.12.4/ocaml-compiler-libs-v0.12.4.tbz"
+  ]
+  [
+    "ocaml-syntax-shims.1.0.0"
+    "https://github.com/ocaml-ppx/ocaml-syntax-shims/releases/download/1.0.0/ocaml-syntax-shims-1.0.0.tbz"
+  ]
+  [
+    "ocaml_intrinsics.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/ocaml_intrinsics-v0.15.0.tar.gz"
+  ]
+  [
+    "ocamlfind.1.8.1+dune"
+    "https://github.com/dune-universe/lib-findlib/archive/v1.8.1+dune.tar.gz"
+  ]
+  [
+    "octavius.1.2.2"
+    "https://github.com/ocaml-doc/octavius/archive/v1.2.2.tar.gz"
+  ]
+  [
+    "parsexp.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/parsexp-v0.15.0.tar.gz"
+  ]
+  [
+    "ppx_derivers.1.2.1"
+    "https://github.com/ocaml-ppx/ppx_derivers/archive/1.2.1.tar.gz"
+  ]
+  [
+    "ppx_yojson_conv_lib.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/ppx_yojson_conv_lib-v0.15.0.tar.gz"
+  ]
+  [
+    "pyml.20211015"
+    "https://github.com/thierry-martinez/pyml/archive/refs/tags/20211015.tar.gz"
+  ]
+  [
+    "re.1.10.3"
+    "https://github.com/ocaml/ocaml-re/releases/download/1.10.3/re-1.10.3.tbz"
+  ]
+  [
+    "result.1.5"
+    "https://github.com/janestreet/result/releases/download/1.5/result-1.5.tbz"
+  ]
+  ["seq.base+dune" "https://github.com/c-cube/seq/archive/0.2.2.tar.gz"]
+  [
+    "sexp_pretty.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexp_pretty-v0.15.0.tar.gz"
+  ]
+  [
+    "sexplib.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexplib-v0.15.0.tar.gz"
+  ]
+  [
+    "sexplib0.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexplib0-v0.15.0.tar.gz"
+  ]
+  [
+    "spawn.v0.15.0"
+    "https://github.com/janestreet/spawn/archive/v0.15.0.tar.gz"
+  ]
+  [
+    "splittable_random.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/splittable_random-v0.15.0.tar.gz"
+  ]
+  [
+    "stdcompat.18+dune"
+    "https://github.com/thierry-martinez/stdcompat/releases/download/v18/stdcompat-18.tar.gz"
+  ]
+  [
+    "stdio.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/stdio-v0.15.0.tar.gz"
+  ]
+  [
+    "stdlib-shims.0.3.0"
+    "https://github.com/ocaml/stdlib-shims/releases/download/0.3.0/stdlib-shims-0.3.0.tbz"
+  ]
+  [
+    "time_now.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/time_now-v0.15.0.tar.gz"
+  ]
+  [
+    "timezone.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/timezone-v0.15.0.tar.gz"
+  ]
+  [
+    "toplevel_backend.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/toplevel_backend-v0.15.0.tar.gz"
+  ]
+  [
+    "typerep.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/typerep-v0.15.0.tar.gz"
+  ]
+  [
+    "variantslib.v0.15.0"
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/variantslib-v0.15.0.tar.gz"
+  ]
+  [
+    "yojson.1.7.0"
+    "https://github.com/ocaml-community/yojson/releases/download/1.7.0/yojson-1.7.0.tbz"
+  ]
+]
+x-opam-monorepo-duniverse-dirs: [
+  [
+    "https://github.com/c-cube/seq/archive/0.2.2.tar.gz"
+    "seq"
+    [
+      "md5=9033e02283aa3bde9f97f24e632902e3"
+      "sha512=cab0eb4cb6d9788b7cbd7acbefefc15689d706c97ff7f75dd97faf3c21e466af4d0ff110541a24729db587e7172b1a30a3c2967e17ec2e49cbd923360052c07c"
+    ]
+  ]
+  [
+    "https://github.com/dune-universe/lib-findlib/archive/v1.8.1+dune.tar.gz"
+    "lib-findlib"
+    [
+      "sha256=1a337aaedca94837d4d6a1689ed18109e4a2cfd4aa99a56252a6f19fe1291bb0"
+    ]
+  ]
+  [
+    "https://github.com/dune-universe/num/archive/v1.3+dune-2.tar.gz"
+    "num"
+    [
+      "sha256=32156376be05260eb72f651ae33df41fe0af03ad322bee29a10495efadfb2d1d"
+    ]
+  ]
+  [
+    "https://github.com/inhabitedtype/angstrom/archive/0.15.0.tar.gz"
+    "angstrom"
+    ["md5=5104768c404ea92fd0a53a5b0f75cd50"]
+  ]
+  [
+    "https://github.com/inhabitedtype/bigstringaf/archive/0.8.0.tar.gz"
+    "bigstringaf"
+    ["md5=c3b8164c1ed1eba9977dcd0c5490e61d"]
+  ]
+  [
+    "https://github.com/inhabitedtype/faraday/archive/0.8.1.tar.gz"
+    "faraday"
+    ["md5=51b97f082af4679e3b428a03c3b657de"]
+  ]
+  [
+    "https://github.com/janestreet/ocaml-compiler-libs/releases/download/v0.12.4/ocaml-compiler-libs-v0.12.4.tbz"
+    "ocaml-compiler-libs"
+    [
+      "sha256=4ec9c9ec35cc45c18c7a143761154ef1d7663036a29297f80381f47981a07760"
+      "sha512=978dba8dfa61f98fa24fda7a9c26c2e837081f37d1685fe636dc19cfc3278a940cf01a10293504b185c406706bc1008bc54313d50f023bcdea6d5ac6c0788b35"
+    ]
+  ]
+  [
+    "https://github.com/janestreet/result/releases/download/1.5/result-1.5.tbz"
+    "result"
+    ["md5=1b82dec78849680b49ae9a8a365b831b"]
+  ]
+  [
+    "https://github.com/janestreet/spawn/archive/v0.15.0.tar.gz"
+    "spawn"
+    [
+      "sha256=310fb2a50ac7f64c738182cbabd9d27c1aeae1a08107fe14da8d35a87cbb57c7"
+      "sha512=3a775b57a73efee6adbc30b32fa779f27d11c7008a46f90fdb9da6288533e2d83fc49dbcd770c087f2e4560c5586ff72a9a2985d8929955773cc10d83f126013"
+    ]
+  ]
+  [
+    "https://github.com/mirage/bigarray-compat/releases/download/v1.1.0/bigarray-compat-1.1.0.tbz"
+    "bigarray-compat"
+    [
+      "sha256=434469a48d5c84e80d621b13d95eb067f8138c1650a1fd5ae6009a19b93718d5"
+      "sha512=7be283fd957ee168ce1e62835d22114da405e4b7da9619b4f2030a832d45ca210a0c8f1d1c57c92e224f3512308a8a0f0923b94f44b6f582acbe0e7728d179d4"
+    ]
+  ]
+  [
+    "https://github.com/mjambon/biniou/releases/download/1.2.1/biniou-1.2.1.tbz"
+    "biniou"
+    [
+      "sha256=35546c68b1929a8e6d27a3b39ecd17b38303a0d47e65eb9d1480c2061ea84335"
+      "sha512=82670cc77bf3e869ee26e5fbe5a5affa45a22bc8b6c4bd7e85473912780e0111baca59b34a2c14feae3543ce6e239d7fddaeab24b686a65bfe642cdb91d27ebf"
+    ]
+  ]
+  [
+    "https://github.com/mjambon/easy-format/releases/download/1.3.2/easy-format-1.3.2.tbz"
+    "easy-format"
+    [
+      "sha256=3440c2b882d537ae5e9011eb06abb53f5667e651ea4bb3b460ea8230fa8c1926"
+      "sha512=e39377a2ff020ceb9ac29e8515a89d9bdbc91dfcfa871c4e3baafa56753fac2896768e5d9822a050dc1e2ade43c8967afb69391a386c0a8ecd4e1f774e236135"
+    ]
+  ]
+  [
+    "https://github.com/ocaml-community/cppo/archive/v1.6.8.tar.gz"
+    "cppo"
+    [
+      "md5=fed401197d86f9089e89f6cbdf1d660d"
+      "sha512=069bbe0ef09c03b0dc4b5795f909c3ef872fe99c6f1e6704a0fa97594b1570b3579226ec67fe11d696ccc349a4585055bbaf07c65eff423aa45af28abf38c858"
+    ]
+  ]
+  [
+    "https://github.com/ocaml-community/yojson/releases/download/1.7.0/yojson-1.7.0.tbz"
+    "yojson"
+    ["md5=b89d39ca3f8c532abe5f547ad3b8f84d"]
+  ]
+  [
+    "https://github.com/ocaml-doc/octavius/archive/v1.2.2.tar.gz"
+    "octavius"
+    ["md5=72f9e1d996e6c5089fc513cc9218607b"]
+  ]
+  [
+    "https://github.com/ocaml-dune/csexp/releases/download/1.5.1/csexp-1.5.1.tbz"
+    "csexp"
+    [
+      "sha256=d605e4065fa90a58800440ef2f33a2d931398bf2c22061a8acb7df845c0aac02"
+      "sha512=d785bbabaff9f6bf601399149ef0a42e5e99647b54e27f97ef1625907793dda22a45bf83e0e8a1eba2c63634c5484b54739ff0904ef556f5fc592efa38af7505"
+    ]
+  ]
+  [
+    "https://github.com/ocaml-ppx/ocaml-syntax-shims/releases/download/1.0.0/ocaml-syntax-shims-1.0.0.tbz"
+    "ocaml-syntax-shims"
+    [
+      "sha256=89b2e193e90a0c168b6ec5ddf6fef09033681bdcb64e11913c97440a2722e8c8"
+      "sha512=75c4c6b0bfa1267a8a49a82ba494d08cf0823fc8350863d6d3d4971528cb09e5a2a29e2981d04c75e76ad0f49360b05a432c9efeff9a4fbc1ec6b28960399852"
+    ]
+  ]
+  [
+    "https://github.com/ocaml-ppx/ppx_derivers/archive/1.2.1.tar.gz"
+    "ppx_derivers"
+    ["md5=5dc2bf130c1db3c731fe0fffc5648b41"]
+  ]
+  [
+    "https://github.com/ocaml/dune/releases/download/3.0.2/fiber-3.0.2.tbz"
+    "dune_"
+    [
+      "sha256=a35d3ca8879630e5f4554ff059d7396e0fd40c24f6082730fd7c779c58836deb"
+      "sha512=6c77afa682dd57d47386832b0be1156b0623920b0e1f6af6819fb18e1a94f9cd31d51cd82e86ce7246b4a65c07dee6061ece3ef4a24dee2bcb6ac114969a20a2"
+    ]
+  ]
+  [
+    "https://github.com/ocaml/ocaml-re/releases/download/1.10.3/re-1.10.3.tbz"
+    "ocaml-re"
+    [
+      "sha256=846546967f3fe31765935dd40a6460a9424337ecce7b12727fcba49480790ebb"
+      "sha512=d02103b7b8b8d8bc797341dcc933554745427f3c1b51b54b4ac9ff81badfd68c94726c57548b08e00ca99f3e09741b54b6500e97c19fc0e8fcefd6dfbe71da7f"
+    ]
+  ]
+  [
+    "https://github.com/ocaml/stdlib-shims/releases/download/0.3.0/stdlib-shims-0.3.0.tbz"
+    "stdlib-shims"
+    [
+      "sha256=babf72d3917b86f707885f0c5528e36c63fccb698f4b46cf2bab5c7ccdd6d84a"
+      "sha512=1151d7edc8923516e9a36995a3f8938d323aaade759ad349ed15d6d8501db61ffbe63277e97c4d86149cf371306ac23df0f581ec7e02611f58335126e1870980"
+    ]
+  ]
+  [
+    "https://github.com/thierry-martinez/pyml/archive/refs/tags/20211015.tar.gz"
+    "pyml"
+    [
+      "sha512=79237ab56a2e439e785f4d873abd603fdaa51dbbb1258efb25102ca897826cf4d5d15e8467f324df85bba3c61995ceee8fb82d0808cda0da8010e024a78307aa"
+    ]
+  ]
+  [
+    "https://github.com/thierry-martinez/stdcompat/releases/download/v18/stdcompat-18.tar.gz"
+    "stdcompat"
+    [
+      "sha512=4323a43d906121951f62ee8da4dec2c3be30540bbdca114096fa3ca655ba05342b429343d0b51df6e8173541e255e3bfe57a047147b27bca1f6bb22a15ce0013"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/accessor-v0.15.0.tar.gz"
+    "accessor"
+    [
+      "sha256=435b0bd1466d826b26f9beff4b629dbbf85abe676bb117effab81ca897c5f0b3"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/base-v0.15.0.tar.gz"
+    "base"
+    [
+      "sha256=8657ae4324a9948457112245c49d97d2da95f157f780f5d97f0b924312a6a53d"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/base_bigstring-v0.15.0.tar.gz"
+    "base_bigstring"
+    [
+      "sha256=ff75f1748baf83b0244aeba4e1bfff7f2da3f3ab5a992bb8a21ab832cea1d56b"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/bin_prot-v0.15.0.tar.gz"
+    "bin_prot"
+    [
+      "sha256=7a4ba0daeacfb87e9cb7e8f49afac43a9bbb64dee4801fd789f1f188059d3690"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core-v0.15.0.tar.gz"
+    "core"
+    [
+      "sha256=3a656f2b8605dd052da6459ad8dace3263d21efe15ef2b3bd36aaa8f8ce85e1f"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core_kernel-v0.15.0.tar.gz"
+    "core_kernel"
+    [
+      "sha256=34a0288f16027c6b90e4ad16cb5cc677d7063d310faf918748ce70f1745116c0"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/core_unix-v0.15.0.tar.gz"
+    "core_unix"
+    [
+      "sha256=0af9d2c0d2029a80858c730171e0bd70a1981b3e7021f8c31cd8dc54925da02d"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/csvfields-v0.15.0.tar.gz"
+    "csvfields"
+    [
+      "sha256=43b117aff5abe66fe11bb6b464f36b3a4adcd356c4c87bf172336a4b741eb002"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/expect_test_helpers_core-v0.15.0.tar.gz"
+    "expect_test_helpers_core"
+    [
+      "sha256=7f2a738564253e32c8bd816f9da548d1619e447b6ebc4c7af33e5c0c52ff9652"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/fieldslib-v0.15.0.tar.gz"
+    "fieldslib"
+    [
+      "sha256=050afd7327840c63483616f9781c6ec127e0e48d270f237f89f56f5290fb7120"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/higher_kinded-v0.15.0.tar.gz"
+    "higher_kinded"
+    [
+      "sha256=24ec1a183fe13b44f13de5853692529ad318a2b9339e1fe7ddb9d788c54ace81"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/int_repr-v0.15.0.tar.gz"
+    "int_repr"
+    [
+      "sha256=5d357b58914bcaa183432f2cfafc726ecccaa36f42cab982ab32e8b1c1ed6719"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jane-street-headers-v0.15.0.tar.gz"
+    "jane-street-headers"
+    [
+      "sha256=34e4a37b26e3827da129c0ac7add26e8c09a21a704d55ca05211a8de17c847e4"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jsonaf-v0.15.0.tar.gz"
+    "jsonaf"
+    [
+      "sha256=695e50569db70af61954a1a177ba119d2f2ddcdd34a54f39213d659b23dd6ff8"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/jst-config-v0.15.0.tar.gz"
+    "jst-config"
+    [
+      "sha256=4913416b89b3c7ff7b75ef5bc98c33166756fa0861aa73dff144b32e6e79dc18"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/ocaml_intrinsics-v0.15.0.tar.gz"
+    "ocaml_intrinsics"
+    [
+      "sha256=bdf6de8cd0157517ffa3827157b7913270db5f66fbfadc503eececa70e448cca"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/parsexp-v0.15.0.tar.gz"
+    "parsexp"
+    [
+      "sha256=d1ee902b12ac7c0c888863025990d06845530fb75328454814e5ce5b6d43d193"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/ppx_yojson_conv_lib-v0.15.0.tar.gz"
+    "ppx_yojson_conv_lib"
+    [
+      "sha256=f9d2c5eff4566ec1f1f379b186ed22c8ddd6be0909a160bc5a9ac7abc6a6b684"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexp_pretty-v0.15.0.tar.gz"
+    "sexp_pretty"
+    [
+      "sha256=99e8643bc2bf9d0201702b165acccc9195bbb481093dc16ccb95c9fdfe015df1"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexplib-v0.15.0.tar.gz"
+    "sexplib"
+    [
+      "sha256=a562348f2cc150224c31e424e0fb4cb11b5980ddc1effbb3b34c431f822b45f7"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/sexplib0-v0.15.0.tar.gz"
+    "sexplib0"
+    [
+      "sha256=94462c00416403d2778493ac01ced5439bc388a68ac4097208159d62434aefba"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/splittable_random-v0.15.0.tar.gz"
+    "splittable_random"
+    [
+      "sha256=9ff8e6c85fb5c39f45ca8bcf499a8bc3f419a18e759091d3a8d82b2aabeedb00"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/stdio-v0.15.0.tar.gz"
+    "stdio"
+    [
+      "sha256=c37292921dc6a88425f773eba6bdbeac1dedacd1f55917fa4bcd9c4b25795e4b"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/time_now-v0.15.0.tar.gz"
+    "time_now"
+    [
+      "sha256=13b353305da2d349fce3bb47be24307a7163318872238eda0a91f15a8a0bcba8"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/timezone-v0.15.0.tar.gz"
+    "timezone"
+    [
+      "sha256=a5fecedd06c779a7a6c0b910e2a1bfc7119049a57e8f6c59bf18752c1271410d"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/toplevel_backend-v0.15.0.tar.gz"
+    "toplevel_backend"
+    [
+      "sha256=8ef9b7b6e74a36d1c87a7a430d3825578bb7c6d4d6ef5484e0c4c670b07f16e4"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/typerep-v0.15.0.tar.gz"
+    "typerep"
+    [
+      "sha256=26c8d37db41440a417593fcb389aaebafdf2e33e62bd762e1f148875a7a3183e"
+    ]
+  ]
+  [
+    "https://ocaml.janestreet.com/ocaml-core/v0.15/files/variantslib-v0.15.0.tar.gz"
+    "variantslib"
+    [
+      "sha256=e5d87438e439877d8580ed209b17c0ba5e36e1405fcf9ddd972f1bbf48d7ba89"
+    ]
+  ]
+]
+x-opam-monorepo-root-packages: [
+  "base_quickcheck"
+  "mlt_parser"
+  "ppx_accessor"
+  "ppx_assert"
+  "ppx_base"
+  "ppx_bench"
+  "ppx_bin_prot"
+  "ppx_cold"
+  "ppx_compare"
+  "ppx_conv_func"
+  "ppx_csv_conv"
+  "ppx_custom_printf"
+  "ppx_disable_unused_warnings"
+  "ppx_enumerate"
+  "ppx_expect"
+  "ppx_fields_conv"
+  "ppx_fixed_literal"
+  "ppx_hash"
+  "ppx_here"
+  "ppx_ignore_instrumentation"
+  "ppx_inline_test"
+  "ppx_jane"
+  "ppx_js_style"
+  "ppx_jsonaf_conv"
+  "ppx_let"
+  "ppx_log"
+  "ppx_module_timer"
+  "ppx_optcomp"
+  "ppx_optional"
+  "ppx_pattern_bind"
+  "ppx_pipebang"
+  "ppx_python"
+  "ppx_sexp_conv"
+  "ppx_sexp_message"
+  "ppx_sexp_value"
+  "ppx_stable"
+  "ppx_string"
+  "ppx_type_directed_value"
+  "ppx_typed_fields"
+  "ppx_typerep_conv"
+  "ppx_variants_conv"
+  "ppx_xml_conv"
+  "ppx_yojson_conv"
+  "ppxlib"
+  "toplevel_expect_test"
+]
+x-opam-monorepo-version: "0.2"

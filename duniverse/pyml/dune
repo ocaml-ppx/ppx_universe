@@ -1,0 +1,65 @@
+(library
+  (public_name pyml)
+  (modules numpy py pyops pycaml pyml_arch pytypes pywrappers pyutils)
+  (foreign_stubs (language c) (names numpy_stubs pyml_stubs))
+  (wrapped false)
+  (libraries bigarray stdcompat))
+
+(executables
+  (names generate)
+  (modules generate)
+  (libraries stdcompat))
+
+(rule
+  (targets pywrappers.ml pyml.h pyml_dlsyms.inc pyml_wrappers.inc)
+  (deps (:gen generate.exe))
+  (action (run %{gen})))
+
+(rule
+  (target pyml_arch_generate.exe)
+  (deps pyml_arch_generate.c)
+  (action (run %{ocaml-config:native_c_compiler} -o pyml_arch_generate.exe pyml_arch_generate.c)))
+
+(rule
+  (target pyml_arch.ml)
+  (deps (:generate pyml_arch_generate.exe))
+  (action (run %{generate})))
+
+(library
+  (name pyml_tests_common)
+  (modules pyml_tests_common)
+  (libraries pyml stdcompat))
+
+(test
+  (name numpy_tests)
+  (modules numpy_tests)
+  (libraries pyml pyml_tests_common stdcompat))
+
+(test
+  (name pyml_tests)
+  (modules pyml_tests)
+  (libraries pyml pyml_tests_common stdcompat))
+
+(rule
+  (enabled_if (>= %{ocaml_version} 4.06))
+  (target pyops.mli)
+  (deps pyops.mli.new)
+  (action (copy %{deps} %{target})))
+
+(rule
+  (enabled_if (>= %{ocaml_version} 4.06))
+  (target pyops.ml)
+  (deps pyops.ml.new)
+  (action (copy %{deps} %{target})))
+
+(rule
+  (enabled_if (< %{ocaml_version} 4.06))
+  (target pyops.mli)
+  (deps pyops.mli.405)
+  (action (copy %{deps} %{target})))
+
+(rule
+  (enabled_if (< %{ocaml_version} 4.06))
+  (target pyops.ml)
+  (deps pyops.ml.405)
+  (action (copy %{deps} %{target})))

@@ -1,0 +1,166 @@
+"Higher kinded types"
+=====================
+
+OCaml natively supports parameterized type constructors, such as
+`option`. The parameters of a type constructor may only be types, not
+arbitrary type constructors.
+
+The following is not legal syntax:
+
+```
+type 'a person =
+  { name : string 'a
+  ; age  : int 'a
+  }
+```
+
+It is not possible to define such a type where `'a` can be replaced
+with something like `option` or `ref`, because you can't apply `'a` to
+other types like `string` or `int`. In other words, although `int
+option` is a valid type expression, `int 'a` is not.
+
+The `Higher_kinded` library makes something similar possible. The
+above example would be defined like this:
+
+```ocaml
+type 'a person =
+  { name : (string -> 'a) Higher_kinded.t
+  ; age : (int -> 'a) Higher_kinded.t
+  }
+```
+
+The fundamental concept of `Higher_kinded` is that a value of type `(a
+-> ... -> z -> C.higher_kinded) Higher_kinded.t` is equivalent to a
+value of type `(a, ..., z) C.t`. The only reason it is rendered as a
+function is that `->` is the only right associative type operator,
+which is useful for reasons that will be explained later.
+
+A signature defining a type constructor can include one of the
+`Higher_kinded.S` signatures, and its implementation should use one of
+the `Higher_kinded.Make` functors. For example, `Option` could look
+something like this:
+
+```ocaml
+# module Option : sig
+    type 'a t = 'a option
+
+    include Higher_kinded.S with type 'a t := 'a t
+  end = struct
+    type 'a t = 'a option
+
+    include Higher_kinded.Make (Base.Option)
+  end
+module Option :
+  sig
+    type 'a t = 'a option
+    type higher_kinded
+    val inject : 'a t -> ('a -> higher_kinded) Higher_kinded.t
+    val project : ('a -> higher_kinded) Higher_kinded.t -> 'a t
+  end
+```
+
+Now it is possible to define values of type `(int ->
+Option.higher_kinded) Higher_kinded.t`:
+
+```ocaml
+# let a = Option.inject (None : int option)
+val a : (int -> Option.higher_kinded) Higher_kinded.t = <abstr>
+# let b = Option.inject (Some 42)
+val b : (int -> Option.higher_kinded) Higher_kinded.t = <abstr>
+```
+
+Here is how to observe them:
+
+```ocaml
+# Option.project b
+- : int option = Some 42
+```
+
+Now that `Option` can be used this way, we can express the `person`
+example from earlier:
+
+```ocaml
+# let alice = { name = Option.inject (Some "alice doe"); age = Option.inject None }
+val alice : Option.higher_kinded person = {name = <abstr>; age = <abstr>}
+```
+
+If we did the same thing with refs:
+
+```ocaml
+module Ref : sig
+  type 'a t = 'a ref
+
+  include Higher_kinded.S with type 'a t := 'a t
+end = struct
+  type 'a t = 'a ref
+
+  include Higher_kinded.Make (Base.Ref)
+end
+```
+
+we could write:
+
+```ocaml
+# let secret_agent =
+    { name = Ref.inject (ref "alice"); age = Ref.inject (ref 55) }
+val secret_agent : Ref.higher_kinded person = {name = <abstr>; age = <abstr>}
+```
+
+Here's how we could modify the references:
+
+```ocaml
+Ref.project secret_agent.name := "Austin Powers";
+Ref.project secret_agent.age := 35
+```
+
+The `inject` and `project` functions have no runtime cost; they only
+change the type.
+
+You can also use `Higher_kinded` for types that have multiple type
+parameters. Here is an example using `Result`:
+
+```ocaml
+# module Result : sig
+    type ('a, 'e) t = ('a, 'e) result
+
+    include Higher_kinded.S2 with type ('a, 'e) t := ('a, 'e) t
+  end = struct
+    type ('a, 'e) t = ('a, 'e) result
+
+    include Higher_kinded.Make2 (Base.Result)
+  end
+module Result :
+  sig
+    type ('a, 'e) t = ('a, 'e) result
+    type higher_kinded
+    val inject : ('a, 'z) t -> ('a -> 'z -> higher_kinded) Higher_kinded.t
+    val project : ('a -> 'z -> higher_kinded) Higher_kinded.t -> ('a, 'z) t
+  end
+```
+
+You can even use multi-parameter higher kinded witnesses in positions
+expecting lower arity types.  For example, suppose that you had an 
+error type defined:
+
+```ocaml
+type error = 
+  | Integer_overflow
+```
+
+Then you could write:
+
+```ocaml
+# let immortal =
+    { name = Result.inject (Ok "Keanu")
+    ; age = Result.inject (Error Integer_overflow)
+    }
+val immortal : (error -> Result.higher_kinded) person =
+  {name = <abstr>; age = <abstr>}
+```
+
+The resulting type uses a partially applied witness (in the above
+example, `error -> Result.higher_kinded`) that explains how to fill in
+the remaining arguments.
+
+This library is a variation on Jeremy Yallop and Leo White's
+"Lightweight higher-kinded polymorphism".
