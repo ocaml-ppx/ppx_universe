@@ -93,7 +93,7 @@
 	url = https://github.com/janestreet/ppx_pipebang.git
 [submodule "rev-deps/ppx_sexp_conv"]
 	path = rev-deps/ppx_sexp_conv
-	url = https://github.com/janestreet/ppx_sexp_conv.git
+	url = https://github.com/pitag-ha/ppx_sexp_conv.git
 [submodule "rev-deps/ppx_sexp_value"]
 	path = rev-deps/ppx_sexp_value
 	url = https://github.com/janestreet/ppx_sexp_value.git
@@ -120,7 +120,7 @@
 	url = https://github.com/janestreet/toplevel_expect_test.git
 [submodule "rev-deps/bisect_ppx"]
 	path = rev-deps/bisect_ppx
-	url = https://github.com/aantron/bisect_ppx.git
+	url = https://github.com/pitag-ha/bisect_ppx.git
 [submodule "rev-deps/bistro"]
 	path = rev-deps/bistro
 	url = https://github.com/pveber/bistro.git
@@ -144,7 +144,7 @@
 	url = https://github.com/LexiFi/gen_js_api.git
 [submodule "rev-deps/gospel"]
 	path = rev-deps/gospel
-	url = git://github.com/ocaml-gospel/gospel
+	url = git://github.com/pitag-ha/gospel
 [submodule "rev-deps/hack_parallel"]
 	path = rev-deps/hack_parallel
 	url = https://github.com/rvantonder/hack_parallel.git
@@ -186,7 +186,7 @@
 	url = https://github.com/JetBrains-Research/OCanren.git
 [submodule "rev-deps/obus"]
 	path = rev-deps/obus
-	url = https://github.com/ocaml-community/obus.git
+	url = https://github.com/pitag-ha/obus.git
 [submodule "rev-deps/ocaml-monadic"]
 	path = rev-deps/ocaml-monadic
 	url = https://github.com/pitag-ha/ocaml-monadic.git
@@ -243,7 +243,7 @@
 	url = https://github.com/ocaml-ppx/ppx_deriving.git
 [submodule "rev-deps/ppx_deriving_cmdliner"]
 	path = rev-deps/ppx_deriving_cmdliner
-	url = https://github.com/hammerlab/ppx_deriving_cmdliner.git
+	url = https://github.com/pitag-ha/ppx_deriving_cmdliner.git
 [submodule "rev-deps/ppx_deriving_hash"]
 	path = rev-deps/ppx_deriving_hash
 	url = https://github.com/sim642/ppx_deriving_hash.git
@@ -264,7 +264,7 @@
 	url = https://github.com/patricoferris/ppx_deriving_yaml.git
 [submodule "rev-deps/ppx_deriving_yojson"]
 	path = rev-deps/ppx_deriving_yojson
-	url = https://github.com/ocaml-ppx/ppx_deriving_yojson.git
+	url = https://github.com/pitag-ha/ppx_deriving_yojson.git
 [submodule "rev-deps/ppx_distr_guards"]
 	path = rev-deps/ppx_distr_guards
 	url = https://github.com/vogler/ppx_distr_guards.git
@@ -279,7 +279,7 @@
 	url = https://github.com/ocaml-ppx/ppx_getenv.git
 [submodule "rev-deps/ppx_import"]
 	path = rev-deps/ppx_import
-	url = https://github.com/ocaml-ppx/ppx_import.git
+	url = https://github.com/pitag-ha/ppx_import.git
 [submodule "rev-deps/ppx_inline_alcotest"]
 	path = rev-deps/ppx_inline_alcotest
 	url = https://github.com/pitag-ha/Fork-of-ppx-inline-alcotest.git
@@ -288,7 +288,7 @@
 	url = https://github.com/mirage/irmin.git
 [submodule "rev-deps/ppx_jsobject_conv"]
 	path = rev-deps/ppx_jsobject_conv
-	url = https://github.com/little-arhat/ppx_jsobject_conv.git
+	url = https://github.com/pitag-ha/ppx_jsobject_conv.git
 [submodule "rev-deps/ppx_make"]
 	path = rev-deps/ppx_make
 	url = https://github.com/bn-d/ppx_make.git
