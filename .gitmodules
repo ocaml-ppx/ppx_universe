@@ -105,7 +105,7 @@
 	url = https://github.com/janestreet/ppx_python.git
 [submodule "rev-deps/ppx_sexp_conv"]
 	path = rev-deps/ppx_sexp_conv
-	url = https://github.com/janestreet/ppx_sexp_conv.git
+	url = https://github.com/pitag-ha/ppx_sexp_conv.git
 [submodule "rev-deps/ppx_sexp_value"]
 	path = rev-deps/ppx_sexp_value
 	url = https://github.com/janestreet/ppx_sexp_value.git
