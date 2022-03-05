@@ -93,9 +93,6 @@ module Default = struct
     | hd :: tl ->
         List.fold_left tl ~init:hd ~f:(fun acc e -> pexp_sequence ~loc acc e)
 
-  let pconstruct cd arg =
-    ppat_construct ~loc:cd.pcd_loc (Located.map_lident cd.pcd_name) arg
-
   let econstruct cd arg =
     pexp_construct ~loc:cd.pcd_loc (Located.map_lident cd.pcd_name) arg
 
@@ -113,7 +110,7 @@ module Default = struct
     | x :: l ->
         ppat_construct ~loc
           (Located.mk ~loc (Longident.Lident "::"))
-          (Some (ppat_tuple ~loc [ x; plist ~loc l ]))
+          (Some ([], ppat_tuple ~loc [ x; plist ~loc l ]))
 
   let unapplied_type_constr_conv_without_apply ~loc (ident : Longident.t) ~f =
     match ident with
@@ -249,10 +246,67 @@ module Default = struct
     match rec_flag with
     | Recursive -> expr
     | Nonrecursive -> eta_reduce_if_possible expr
+
+  module V2 = struct
+    let ppat_construct = ppat_construct
+
+    let pconstruct cd arg =
+      ppat_construct ~loc:cd.pcd_loc (Located.map_lident cd.pcd_name) arg
+
+    let constructor_declaration = constructor_declaration
+  end
+
+  let ppat_construct ~loc lid p =
+    {
+      ppat_loc_stack = [];
+      ppat_attributes = [];
+      ppat_loc = loc;
+      ppat_desc = Ppat_construct (lid, Option.map p ~f:(fun p -> ([], p)));
+    }
+
+  let pconstruct cd arg =
+    ppat_construct ~loc:cd.pcd_loc (Located.map_lident cd.pcd_name) arg
+
+  let constructor_declaration ~loc ~name ~args ~res =
+    {
+      pcd_name = name;
+      pcd_vars = [];
+      pcd_args = args;
+      pcd_res = res;
+      pcd_loc = loc;
+      pcd_attributes = [];
+    }
 end
 
 module type Loc = Ast_builder_intf.Loc
-module type S = Ast_builder_intf.S
+
+module type S = sig
+  include Ast_builder_intf.S
+
+  module V2 : sig
+    val ppat_construct :
+      longident loc -> (label loc list * pattern) option -> pattern
+
+    val pconstruct :
+      constructor_declaration -> (label loc list * pattern) option -> pattern
+
+    val constructor_declaration :
+      name:label loc ->
+      vars:label loc list ->
+      args:constructor_arguments ->
+      res:core_type option ->
+      constructor_declaration
+  end
+
+  val ppat_construct : longident loc -> pattern option -> pattern
+  val pconstruct : constructor_declaration -> pattern option -> pattern
+
+  val constructor_declaration :
+    name:label loc ->
+    args:constructor_arguments ->
+    res:core_type option ->
+    constructor_declaration
+end
 
 module Make (Loc : sig
   val loc : Location.t
@@ -301,7 +355,6 @@ end) : S = struct
   let eunit = Default.eunit ~loc
   let punit = Default.punit ~loc
   let econstruct = Default.econstruct
-  let pconstruct = Default.pconstruct
   let eapply e el = Default.eapply ~loc e el
   let eabstract ps e = Default.eabstract ~loc ps e
   let esequence el = Default.esequence ~loc el
@@ -319,6 +372,32 @@ end) : S = struct
 
   let eta_reduce_if_possible_and_nonrec =
     Default.eta_reduce_if_possible_and_nonrec
+
+  module V2 = struct
+    let ppat_construct = ppat_construct
+    let pconstruct cd arg = ppat_construct (Located.map_lident cd.pcd_name) arg
+    let constructor_declaration = constructor_declaration
+  end
+
+  let ppat_construct lid p =
+    {
+      ppat_loc_stack = [];
+      ppat_attributes = [];
+      ppat_loc = loc;
+      ppat_desc = Ppat_construct (lid, Option.map p ~f:(fun p -> ([], p)));
+    }
+
+  let pconstruct cd arg = ppat_construct (Located.map_lident cd.pcd_name) arg
+
+  let constructor_declaration ~name ~args ~res =
+    {
+      pcd_name = name;
+      pcd_vars = [];
+      pcd_args = args;
+      pcd_res = res;
+      pcd_loc = loc;
+      pcd_attributes = [];
+    }
 end
 
 let make loc =
