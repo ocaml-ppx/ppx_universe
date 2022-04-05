@@ -8,8 +8,10 @@ This is a snapshot from March 3rd 2022 of all ppxlib reverse dependencies that m
 
 It has been created one by one [following these steps](dev/every_step.sh).
 
+The reverse dependencies are in `rev-deps`. There's a list of all reverse dependencies that have been cloned into `rev-deps` [here](rev-deps/.deps).
+
 ## How to clone the ppx-universe
-The project contains submodules. To make sure you also clone the content of those submodules, it can be cloned as follows:
+The reverse dependencies are embedded into the git structure as git submodules. To make sure you also clone the content of those submodules, it can be cloned as follows:
 ```
 git clone --recurse-submodules https://github.com/ocaml-ppx/ppx_universe.git
 ```
